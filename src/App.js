@@ -3,7 +3,7 @@ import React from 'react'
 import './App.css'
 import Slider1 from './components/Slider1/Slider1.js'
 import Axios from 'axios'
-
+import Surprise from './components/Surprise'
 
 function App() {
 
@@ -23,8 +23,9 @@ function App() {
 
       <h1>Our Second Project Cocktails</h1>
 
-      <Slider1 data= {getData}/>
-
+      <Slider1 data={getData} />
+      
+      <Surprise />
     </div>
   )
 }
