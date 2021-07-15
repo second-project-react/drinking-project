@@ -2,6 +2,8 @@ import React from "react";
 import {Container} from "react-bootstrap";
 import Axios from 'axios'
 import Surprise from './components/Surprise'
+import Card1 from './components/Card1'
+
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -53,8 +55,8 @@ const Home = (props) => {
         <div><img src='./img/4.jpg' alt=""></img></div>
         <div><img src='./img/7.png' alt=""></img></div>
       </Carousel>
-  
-      </div>
+      <Card1/>
+    </div>
       
     </Container>
    )

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Axios from 'axios';
 
 import Home from './Home';
 
@@ -11,7 +12,7 @@ import {Container, Row, Col } from "react-bootstrap";
 
 // process.env.REACT_APP_SECRET_KEY
 function App() {
-
+  
 
   return (
 
@@ -20,6 +21,7 @@ function App() {
           <div className="content-wrapper">
                <div id="sidebar-wrapper">      
                  <Sidebar />
+            
                </div>
           <div id="page-content-wrapper">
           <Navigation/>
