@@ -1,17 +1,18 @@
-import React from 'react'
-import './App.css'
-import Axios from 'axios'
-import Surprise from './components/Surprise'
+import React from 'react';
+import './App.css';
+import Axios from 'axios';
+import Surprise from './components/Surprise';
+
 
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 // process.env.REACT_APP_SECRET_KEY
-function App() {
+export default function App() {
 
   const getData = () => {
-    Axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/list.php?c=list')
+    Axios.get('www.thecocktaildb.com/api/json/v2/9973533/filter.php?id=15300')
     .then((response)=>{
      console.log(response)
      return response
@@ -41,7 +42,7 @@ const responsive = {
 
   return (
     <div className="App">
-      <h1>Our second project Cocktails</h1>
+      <h1>Our second project Cocktails{getData()}</h1>
       <Surprise />
       <Carousel responsive={responsive}>
         <div><img src='./img/1.jpg' style={{width:"200px" }}></img></div>
@@ -50,6 +51,9 @@ const responsive = {
         <div><img src='./img/4.jpg'></img></div>
         <div><img src='./img/7.png'></img></div>
       </Carousel>;
+      </div>
+  )
+}
 
   
   
