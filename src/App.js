@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
-import Axios from 'axios';
+
+import {Route} from 'react-router-dom'
 
 import Home from './Home';
 
 import Sidebar from './components/Sidebar';
+
 import Navigation from './components/Navbar'
 
 import {Container, Row, Col } from "react-bootstrap";
@@ -22,11 +24,16 @@ function App() {
 
 return(
     <>
+
       <Container fluid pr-0>
+
           <div className="content-wrapper">
                <div id="sidebar-wrapper">      
                   <Sidebar itemSelect={toggleMenu}/>
-               </div>
+
+          <div id="sidebar-wrapper">
+          </div>
+
           <div id="page-content-wrapper">
             <Navigation />
             {menuItem === 1 && <Home />}
@@ -34,11 +41,16 @@ return(
             {menuItem === 3 && <Home />}
             {menuItem === 4 && <Ingredient />}
             </div>
-          </div>
+
+        </div>
+        </div>
+
        </Container>
+
    </>
+
   )
+
 }
 
 export default App;
-

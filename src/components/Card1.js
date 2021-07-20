@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import './Card1.css';
 
-
-
 function Card1(){
 
     const [value, setValue]= useState({})
@@ -13,7 +11,6 @@ function Card1(){
             .then((response) => response.data)
          .then((data)=>{
              setValue(data.drinks[0])
-             console.log(data.drinks[0])
          })
          .catch((error)=>{
            console.log(error)
@@ -47,7 +44,7 @@ function Card1(){
     console.log(value.strGlass)
      return(
          <div className="Card1">
-           <h2 className="drinkName">{value.strDrink}</h2>
+           <h2 className="card1_drinkName">{value.strDrink}</h2>
            <h5 className="drinkCategory">{value.strAlcoholic}</h5>
             {/* <h5 className="drinkCategory">{value.strGlass}</h5> */}
 
