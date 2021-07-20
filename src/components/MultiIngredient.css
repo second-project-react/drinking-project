@@ -1,5 +1,7 @@
 .multiIngredient{
-   background: linear-gradient(89.95deg, #F9D067 3.82%, #FDBD84 32.74%, #FF9BA1 49.42%, #FDBD81 68.37%, #F8C23A 95.97%);
+   /* background: linear-gradient(89.95deg, #F9D067 3.82%, #FDBD84 32.74%, #FF9BA1 49.42%, #FDBD81 68.37%, #F8C23A 95.97%); */
+
+   background: linear-gradient(90.55deg, #F39DA2 0.47%, #FCC698 38.13%, #FDC997 71.61%, #FF9BA1 100.98%);
    opacity: 0.77;
    width:100vw;
    height:100vw;
