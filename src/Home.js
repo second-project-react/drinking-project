@@ -10,6 +10,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import './Home.css'
 
+
 const Home = (props) => {
 
    const getData = () => {

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import './Card1.css';
 
+
+
 function Card1(){
 
     const [value, setValue]= useState({})
@@ -42,12 +44,12 @@ function Card1(){
     const twoInOne = ((item, index) => allLiOfIngridientsAndMeasure.push(`${finalArrayOfMeasure[index]} - ${item} `))
     
     finalArrayOfIngredients.forEach(twoInOne);
-
+console.log(value.strGlass)
      return(
          <div className="Card1">
            <h2 className="drinkName">{value.strDrink}</h2>
            <h5 className="drinkCategory">{value.strAlcoholic}</h5>
-            <h5 className="drinkCategory">{value.strTags}</h5>
+            {/* <h5 className="drinkCategory">{value.strGlass}</h5> */}
 
            <div className="container1">
             <div className="container1A">
