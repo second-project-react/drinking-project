@@ -20,8 +20,7 @@ function App() {
     setMenuItem(item)
   }
 
-  return (
-
+return(
     <>
       <Container fluid pr-0>
           <div className="content-wrapper">
