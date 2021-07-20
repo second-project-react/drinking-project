@@ -1,14 +1,16 @@
 import React from "react";
 import {Container} from "react-bootstrap";
 import Axios from 'axios'
+
+
 import Surprise from './components/Surprise'
 import Card1 from './components/Card1'
-
-
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Shots from './components/Shots'
+
 
 import './Home.css'
+import "react-multi-carousel/lib/styles.css";
 
 const Home = (props) => {
 
@@ -44,8 +46,9 @@ const Home = (props) => {
    return (
       <Container fluid className="Home p-0">
          <div className="topPart">
-         {/* <h1>Our second project Cocktails</h1> */}
+         <h1>Our second project Cocktails</h1>
          </div>
+         <Shots />
          <div className="bottomPart">
          <Surprise />
         <Carousel responsive={responsive}>
