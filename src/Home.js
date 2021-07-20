@@ -12,6 +12,7 @@ import Shots from './components/Shots'
 import './Home.css'
 import "react-multi-carousel/lib/styles.css";
 
+
 const Home = (props) => {
 
    const getData = () => {

@@ -1,18 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Lato+Sans')
+
 .Card1 {
     /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
+    flex-direction: row;
+    justify-content: space-evenly; */
+    margin-bottom: 100px;
 }
-
-
-
-.drinkName {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    margin: 20px;
-    font-size: 25px;
+.container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     margin: 50px;
 }
+.container1A {
+    display: flex;
+    justify-content: flex-start;
+}
+.container1B {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px;
+}
+
+
+.card1_drinkName {
+    /* font-family: 'Josefin', sans-serif; */
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    }
 
 .drinkImage {
    
@@ -20,22 +39,30 @@
     height: auto;
     border-radius: 50px;
     /* padding: 10px; */
-    border: 10px solid white;
+    border: 5px solid white;
     filter: contrast(125%)
 
 }
 .sectionName {
-    font-size: 25px;
-    font-weight: light;
-    margin-top: 40px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    /* margin-top: 30px; */
 }
 .drinkIngredients {
     list-style-type: none;
-    display:inline-block;
+    /* display:inline-block; */
+    text-align: left;
 }
 .drinkMeasures {
     list-style-type: none;
 }
-.drinkInstruction {
+.drinkCategory {
+    margin-top: 20px;
+    font-weight: light;
+    font-style: italic;
 
+}
+.drinkInstructions {
+    text-align: left;
 }
