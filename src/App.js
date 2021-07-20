@@ -10,16 +10,15 @@ import Navigation from './components/Navbar'
 import {Container, Row, Col } from "react-bootstrap";
 
 
-// process.env.REACT_APP_SECRET_KEY
-function App() {
-  
 
-  return (
+export default function App() {
+
+  const getData = () => {
+    Axios.get('www.thecocktaildb.com/api/json/v2/9973533/filter.php?id=15300')
 
     <>
       <Container fluid pr-0>
           <div className="content-wrapper">
-               <div id="sidebar-wrapper">      
                  <Sidebar />
             
                </div>
