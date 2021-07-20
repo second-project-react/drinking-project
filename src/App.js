@@ -11,11 +11,12 @@ import {Container, Row, Col } from "react-bootstrap";
 
 
 
-export default function App() {
+ function App() {
 
-  const getData = () => {
-    Axios.get('www.thecocktaildb.com/api/json/v2/9973533/filter.php?id=15300')
-
+  // const getData = () => {
+  //   Axios.get('www.thecocktaildb.com/api/json/v2/9973533/filter.php?id=15300')
+  // }
+return (
     <>
       <Container fluid pr-0>
           <div className="content-wrapper">
@@ -26,7 +27,7 @@ export default function App() {
           <Navigation/>
                    <Home />
             </div>
-          </div>
+        
        </Container>
    </>
   )

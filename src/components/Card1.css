@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Lato+Sans')
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans'); */
 
 .Card1 {
     /* display: flex;
     flex-direction: row;
     justify-content: space-evenly; */
     margin-bottom: 100px;
+    margin-left: 50px;
 }
 .container1 {
     display: flex;
@@ -25,8 +26,8 @@
 }
 
 
-.drinkName {
-    font-family: 'Lato', sans-serif;
+.card1_drinkName {
+    /* font-family: 'Josefin', sans-serif; */
     font-weight: bolder;
     font-size: 25px;
     margin-top: 50px;
