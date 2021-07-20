@@ -5,7 +5,7 @@ import { Home,Heart,User,Sliders,Settings } from 'react-feather';
 import './Sidebar.css'
 
 const Sidebar = (props) => {
-   
+
 
     return (
         <>  
@@ -17,19 +17,21 @@ const Sidebar = (props) => {
                 
                 <div className="sideNavIcons">
 
-             <div className="topNavIcons">
-            <Nav.Item>
+            <div className="topNavIcons">
+            <Nav.Item onClick={() => props.itemSelect(1)}>
                 <Nav.Link><Home size={30}/></Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            <Nav.Item onClick={() => props.itemSelect(2)}>
                 <Nav.Link><Heart size={30}/></Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            <Nav.Item onClick={() => props.itemSelect(3)}>
                 <Nav.Link><User size={30}/></Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-                <Nav.Link><Sliders size={30}/></Nav.Link>
-                </Nav.Item>
+            <Nav.Item onClick={() => props.itemSelect(4)}>
+                  <Nav.Link><Sliders size={30}/></Nav.Link>
+            </Nav.Item>
+
+
                 </div>
             <div className="bottomNavIcon">
                 <Nav.Item>

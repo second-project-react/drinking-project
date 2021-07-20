@@ -10,6 +10,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import './Home.css'
 
+
 const Home = (props) => {
 
    const getData = () => {
@@ -57,7 +58,6 @@ const Home = (props) => {
       </Carousel>
       <Card1/>
     </div>
-      
     </Container>
    )
 }

@@ -1,0 +1,26 @@
+.multiIngredient{
+   background: linear-gradient(89.95deg, #F9D067 3.82%, #FDBD84 32.74%, #FF9BA1 49.42%, #FDBD81 68.37%, #F8C23A 95.97%);
+   opacity: 0.77;
+   width:100vw;
+   height:100vw;
+
+}
+
+#inputField{
+   border-radius: 5px;
+   border:1px solid gray;
+   margin:1rem;
+   box-shadow: 5px 5px 5px gray;;
+}
+#induvidualIngredient{
+   cursor:pointer;
+}
+#listIngredient{
+   overflow-y: scroll;
+   height: 700px;
+   width:220px;
+   box-shadow: darkgrey;
+}
+.ingredientImage{
+   filter: contrast(140%)
+}
