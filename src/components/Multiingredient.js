@@ -109,7 +109,7 @@ const MultiIngredient = () => {
             <Row>
                
             <Col md={4}>
-                  <div id="selectBox"> 
+                  <div className="selectBox"> 
                      <div className="multiInputfield">
       
                       <input id="inputField" type="text" placeholder="  Type here..." value={searchValue} onChange={(event) => setSearchValue(event.target.value)} />
