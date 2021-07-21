@@ -41,6 +41,7 @@ font-family: 'Montserrat', sans-serif;
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
    border-radius: 41px;
    margin-top: 50px;
+   border:1px solid black;
    
 }
 
@@ -85,7 +86,7 @@ font-family: 'Montserrat', sans-serif;
  #listIngredient::-webkit-scrollbar-thumb {
    background-color:  #FDBCBF;    /* color of the scroll thumb */
    border-radius: 20px;       /* roundness of the scroll thumb */
-   border: 0.3px solid black;  /* creates padding around scroll thumb */
+   /* border: 0.5px solid gray;  creates padding around scroll thumb */
  }
 .ingredientImage{
    filter: contrast(140%)
@@ -140,7 +141,7 @@ font-family: 'Montserrat', sans-serif;
 /* 
  Card CSS */
  .multiCardImg {
-   height: 200px;
+   height: 160px;
    border-radius: 20px;
    border: 1px solid white;
    filter: contrast(125%);
