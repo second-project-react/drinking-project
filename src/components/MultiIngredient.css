@@ -1,28 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .multiIngredient{
-   /* background: linear-gradient(89.95deg, #F9D067 3.82%, #FDBD84 32.74%, #FF9BA1 49.42%, #FDBD81 68.37%, #F8C23A 95.97%); */
+   background: #70e1f5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
 
-   background: linear-gradient(90.55deg, #F39DA2 0.47%, #FCC698 38.13%, #FDC997 71.61%, #FF9BA1 100.98%);
-   opacity: 0.77;
-   width:100vw;
-   height:100vw;
+ background: linear-gradient(to right, #ffd194, #70e1f5);  
 
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+
+
+}
+
+.muliTitleh1{
+   font-family: 'Montserrat', sans-serif;
+
+}
+.muliTitle{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   padding:20px;
+   margin:20px;
+}
+.multiSelected
+{
+margin-left:30px;
+margin-left:20px;
+font-family: 'Montserrat', sans-serif;
+}
+#selectBox{
+   background: #F1F1F1;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   border-radius: 41px;
+   
+}
+
+.multiInputfield{
+   margin: 0 auto;
+   padding: 20px 24px;
 }
 
 #inputField{
-   border-radius: 5px;
-   border:1px solid gray;
-   margin:1rem;
-   box-shadow: 5px 5px 5px gray;;
+   background: #FFFFFF;
+   border: 1px solid #000000;
+   width: 100%;
+   padding: 10px 11px 11px 11px;
+   border-radius: 16px;
+   box-shadow: none;
+   outline: none;
+   margin: 0;
+   box-sizing: border-box;
 }
-#induvidualIngredient{
-   cursor:pointer;
-}
+
 #listIngredient{
    overflow-y: scroll;
-   height: 700px;
-   width:220px;
-   box-shadow: darkgrey;
+   height: 800px;
+  box-shadow: darkgrey;
+   padding: 16px;
+   text-align: center;
 }
 .ingredientImage{
    filter: contrast(140%)
 }
+
+.chipMain
+
+   {
+      display: inline-block;
+      padding: 0 12px;
+      height: 25px;
+      font-size: 12px;
+      line-height: 25px;
+      border-radius: 25px;
+      background-color: #FDBCBF;
+      margin: 2px;
+      cursor: pointer;
+      transition: 1s ease-in-out;
+    }
+
+.chipActive{
+   background-color: #FFD977;
+}
+    
+
+.chip {
+   display: inline-block;
+   padding: 0 25px;
+   height: 30px;
+   font-size: 16px;
+   line-height: 30px;
+   border-radius: 25px;
+
+   background: linear-gradient(180deg, #FFE193 39.6%, rgba(255, 225, 147, 0) 129.7%);
+
+   margin:2px;
+ }
+ 
+ .multiCardList{
+   display: flex;
+   flex-wrap: wrap;
+   font-size: 5px;
+   justify-content: space-around;
+   font-family: 'Lato', sans-serif;
+   margin-top: 70px;
+
+
+ }

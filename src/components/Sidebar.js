@@ -18,17 +18,17 @@ const Sidebar = (props) => {
                 <div className="sideNavIcons">
 
             <div className="topNavIcons">
-            <Nav.Item onClick={() => props.itemSelect(1)}>
-                <Nav.Link><Home size={30}/></Nav.Link>
+            <Nav.Item>
+                <Nav.Link><Home/></Nav.Link>
             </Nav.Item>
-            <Nav.Item onClick={() => props.itemSelect(2)}>
-                <Nav.Link><Heart size={30}/></Nav.Link>
+            <Nav.Item >
+                <Nav.Link><Heart/></Nav.Link>
             </Nav.Item>
-            <Nav.Item onClick={() => props.itemSelect(3)}>
-                <Nav.Link><User size={30}/></Nav.Link>
+            <Nav.Item >
+                <Nav.Link><User/></Nav.Link>
             </Nav.Item>
-            <Nav.Item onClick={() => props.itemSelect(4)}>
-                  <Nav.Link><Sliders size={30}/></Nav.Link>
+            <Nav.Item >
+                  <Nav.Link><Sliders /></Nav.Link>
             </Nav.Item>
 
 

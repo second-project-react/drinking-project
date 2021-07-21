@@ -9,9 +9,9 @@ import Sidebar from './components/Sidebar';
 
 import Navigation from './components/Navbar'
 
-import {Container, Row, Col } from "react-bootstrap";
+import {Container } from "react-bootstrap";
 import Ingredient from './Ingredient';
-import Card1 from './components/Card1'
+
 
 // process.env.REACT_APP_SECRET_KEY
 function App() {
@@ -23,29 +23,24 @@ function App() {
   }
 
 return(
-    <>
+    <>          
 
-      <Container fluid pr-0>
+<Container fluid className="p-0">
+ 
+ <div className="content-wrapper">
+      <div id="sidebar-wrapper">      
+        <Sidebar itemSelect={toggleMenu} />
+      </div>
 
-          <div className="content-wrapper">
-               <div id="sidebar-wrapper">      
-                  <Sidebar itemSelect={toggleMenu}/>
-
-          <div id="sidebar-wrapper">
-          </div>
-
-          <div id="page-content-wrapper">
-            <Navigation />
-            {menuItem === 1 && <Home />}
-            {menuItem === 2 && <Home />}
-            {menuItem === 3 && <Home />}
-            {menuItem === 4 && <Ingredient />}
-            </div>
-
-        </div>
-        </div>
-
-       </Container>
+ <div id="page-content-wrapper">
+   <Navigation />
+    <Home />
+   
+   </div>
+ 
+   </div>
+ 
+ </Container>
 
    </>
 

@@ -1,0 +1,16 @@
+
+.multiCardImg {
+   height: 200px;
+   border-radius: 20px;
+   border: 5px solid white;
+   filter: contrast(125%);
+   
+}
+
+.multidrinkName {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 20px;
+   margin: 5px 0 40px 0;
+   width: 200px;
+}

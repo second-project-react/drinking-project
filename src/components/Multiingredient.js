@@ -1,5 +1,5 @@
 
-import { Container,Row, Col, SplitButton } from "react-bootstrap";
+import { Container,Row, Col} from "react-bootstrap";
 import Axios from 'axios'
 import React, {  useEffect,useState } from 'react';
 import IngredientCard from "./IngredientCard";
@@ -74,7 +74,13 @@ const MultiIngredient = () => {
                return (
                   // <div id="induvidualIngredient" >{index === 0 ? console.log(item.selected) : null} <button onClick={() => itemClicked(item)} style={item.selected ? { backgroundColor: "red" } : { backgroundColor: "white" }}>{item.strIngredient1}</button></div>
 
-                  <div id="induvidualIngredient" onClick={() => itemClicked(item)} style={item.selected ? { backgroundColor: "red" } : { backgroundColor: "white" }}>{item.strIngredient1}   </div>
+                  <div className={item.selected? "chipMain chipActive" : "chipMain" } onClick={() => itemClicked(item)}>
+                              {item.strIngredient1}
+                     {/* <span class="closebtn" onClick={() => itemClicked(item)}> </span> */}
+                              
+                              </div>
+
+                  // <div id="induvidualIngredient" onClick={() => itemClicked(item)} style={item.selected ? { backgroundColor: "red" } : { backgroundColor: "white" }}>{item.strIngredient1}   </div>
                )
             });
 
@@ -90,25 +96,45 @@ const MultiIngredient = () => {
    // });
    return (
       <div  className="multiIngredient">
-<Container>
-  <Row>
-            <Col xs={4}>
-               <div>
-               <input id="inputField" type="text" placeholder="Type here..." value={searchValue} onChange={(event) => setSearchValue(event.target.value)} />
-               </div>
-               <div id="listIngredient" >
-               {listItems}
+         <Container>
+            <div className="muliTitle">
+               <h1 ClassNAme="muliTitleh1">Filter Cocktails By Ingredients</h1>
+             
+            </div>
+         
+            <Row>
+               
+            <Col md={4}>
+                  <div id="selectBox"> 
+                     <div className="multiInputfield">
+      
+                      <input id="inputField" type="text" placeholder="  Type here..." value={searchValue} onChange={(event) => setSearchValue(event.target.value)} />
+                  </div>
+                  <div >
+                        <p className='multiSelected'> Selected Ingredients : </p>
+                
+                      
+                           {selectIngredient.map((items) => <div class="chip">
+                              {items.strIngredient1}
+                              <span class="closebtn" onclick="">  &times;</span>
+                              
+                              </div> ) }
+              
+                  </div>
+                  <div id="listIngredient" >
+                  {listItems}
                   {/* <ul id="listIngredient">{listItems}</ul> */}
-               </div>
+                  </div>
+                  </div>
             </Col>
             <Col xs={8}>
-               <h3>Selected Ingredients : </h3>
-               {selectIngredient.map((items) => <p> {items.strIngredient1}</p>) }
+             <div className="multiCardList">
                {displayIngredient !== 'None Found' ? displayIngredient.map((items) => <IngredientCard cocktailList={items}/>) : <h1> No Matches Found</h1>}
-               
+               </div>
             </Col>
-</Row>
-</Container></div>
+            </Row>
+         </Container>
+      </div>
    );
 }
 export default MultiIngredient
