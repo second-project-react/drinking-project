@@ -1,10 +1,11 @@
-
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans'); */
 
 .Card1 {
     /* display: flex;
     flex-direction: row;
     justify-content: space-evenly; */
     margin-bottom: 100px;
+    margin-left: 50px;
 }
 .container1 {
     display: flex;
