@@ -28,7 +28,7 @@ export default function ShotsList() {
             <div className='listOfShots'>
                 {shots.map((shot, index) => (
                     <ShotCard 
-                        key={index}
+                        key={shot.idDrink}
                         shotsName={shot.strDrink}
                         shotsImage={shot.strDrinkThumb}
                         shotsId={shot.idDrink}

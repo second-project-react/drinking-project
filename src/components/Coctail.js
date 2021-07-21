@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
-import './Card1.css';
+import './Cocktail.css';
 
-function Card1(){
-
+function Cocktail({ match }){
+  console.log(match)
     const [value, setValue]= useState({})
   
     useEffect(()=>{
-       Axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=15300')
+       Axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${match.params.id}`)
             .then((response) => response.data)
          .then((data)=>{
              setValue(data.drinks[0])
@@ -41,9 +41,9 @@ function Card1(){
     const twoInOne = ((item, index) => allLiOfIngridientsAndMeasure.push(`${finalArrayOfMeasure[index]} - ${item} `))
     
     finalArrayOfIngredients.forEach(twoInOne);
-console.log(value.strGlass)
-     return(
-         <div className="Card1">
+
+      return(
+         <div className="cocktail">
            <h2 className="card1_drinkName">{value.strDrink}</h2>
            <h5 className="drinkCategory">{value.strAlcoholic}</h5>
             {/* <h5 className="drinkCategory">{value.strGlass}</h5> */}
@@ -63,8 +63,9 @@ console.log(value.strGlass)
            </div>
            </div>
              
-         </div>)
+         </div>
+      )
      
  }
  
-export default Card1;
+export default Cocktail;
