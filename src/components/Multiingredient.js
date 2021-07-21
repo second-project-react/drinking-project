@@ -96,12 +96,16 @@ const MultiIngredient = () => {
    // });
    return (
       <div  className="multiIngredient">
-         <Container>
+      <Container>
+         
+            <div className="muliTitleDiv">
             <div className="muliTitle">
-               <h1 ClassNAme="muliTitleh1">Filter Cocktails By Ingredients</h1>
+               <h1 ClassNAme="muliTitleh1">Search Cocktails By Ingredients</h1>
+  
              
             </div>
-         
+               <hr className="custom-hr" size="50" width="40%" ></hr>
+               </div>
             <Row>
                
             <Col md={4}>
@@ -132,9 +136,11 @@ const MultiIngredient = () => {
                {displayIngredient !== 'None Found' ? displayIngredient.map((items) => <IngredientCard cocktailList={items}/>) : <h1> No Matches Found</h1>}
                </div>
             </Col>
-            </Row>
+         </Row>
+       
          </Container>
-      </div>
+         </div>
+     
    );
 }
 export default MultiIngredient

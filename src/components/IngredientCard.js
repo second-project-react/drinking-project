@@ -1,5 +1,4 @@
-
-import './IngredientCard.css'
+import './MultiIngredient.css'
 
 function IngredientCard ({ cocktailList }) {
    return (
