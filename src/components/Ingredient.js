@@ -1,7 +1,7 @@
 import React from "react";
 import {Container} from "react-bootstrap";
 
-import MultiIngredient from "./components/Multiingredient";
+import MultiIngredient from "./Multiingredient";
 
 const Ingredient = (props) => {
 

@@ -59,10 +59,11 @@ const CarouselTop = ({ deviceType }) => {
   dotListClass="custom-dot-list-style"
   itemClass="carousel-item-padding-40-px"
 >
-  <div> <Surprise /></div>
-  <div> <img src="./img/drink.png" alt="drink" /></div>
-  <div> <Surprise /></div>
-  <div> <Surprise /></div>
+
+  <div> <img src="./img/c.png" alt="drink" /></div>
+  <div> <img src= "./img/drink.png"alt="drink"/></div>
+      <div> <img src="./img/drink.png" alt="drink" /></div>
+      <div> <img src="./img/c.png" alt="drink"/></div>
 </Carousel>
   );
 };

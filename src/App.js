@@ -16,7 +16,7 @@ import Cocktail from './components/slider/Cocktail'
 import {Container} from "react-bootstrap";
 
 
-import Ingredient from './Ingredient';
+import Ingredient from './components/Ingredient';
 
 
 // process.env.REACT_APP_SECRET_KEY

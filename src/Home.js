@@ -1,16 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Link } from 'react-router-dom'
-
 import Surprise from './components/Surprise'
 import Carousel from "react-multi-carousel";
-
-
-
-
-
 import './Home.css'
 import "react-multi-carousel/lib/styles.css";
+import Ingredient from "./components/Ingredient";
+import CarouselTop from "./components/CarouselTop";
 
 
 const Home = (props) => {
@@ -35,7 +31,8 @@ const Home = (props) => {
    return (
       <Container fluid className="Home p-0">
          <div className="topPart">
-         <h1>Our second project Cocktails</h1>
+            <h1>Our second project Cocktails</h1>
+            <CarouselTop />
          </div>
          <div className="bottomPart">
          <Surprise />
@@ -47,7 +44,7 @@ const Home = (props) => {
         <Link to='/punch'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Punch</h5></div></Link>
       </Carousel>
     </div>
-      
+      <Ingredient />
     </Container>
    )
 }
