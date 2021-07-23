@@ -31,7 +31,7 @@ const Surprise = () => {
          <div className="surpriseImg"> 
         
 
-            <img src={random?.strDrinkThumb} alt="random cocktail" />
+            <img src = './img/surprise.png' alt="random cocktail" />
          </div>
          <div  className="surpriseDesc">
             <h3>{random?.strDrink}</h3>

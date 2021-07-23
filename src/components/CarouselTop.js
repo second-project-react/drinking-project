@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-import Surprise from "./Surprise";
 
+import { Link } from 'react-router-dom'
 
 
 const responsive = {
@@ -12,8 +12,8 @@ const responsive = {
     },
 
     items: 3,
-    slidesToSlide: 2,
-    partialVisibilityGutter: 40,
+    slidesToSlide: 1,
+    partialVisibilityGutter: 0,
   },
 
   mobile: {
@@ -48,7 +48,7 @@ const CarouselTop = ({ deviceType }) => {
   showDots={true}
   responsive={responsive}
   ssr={false} // means to render carousel on server-side.
-  infinite={true}
+  infinite={false}
   autoPlay={false}
   keyBoardControl={true}
   customTransition="all .5"
@@ -58,12 +58,24 @@ const CarouselTop = ({ deviceType }) => {
   deviceType={deviceType}
   dotListClass="custom-dot-list-style"
   itemClass="carousel-item-padding-40-px"
+  afterChange={(previousSlide, { currentSlide, onMove }) => {
+    console.log(currentSlide)
+      }}
+  
 >
+<Link to='/classics'> <div><div><img src="./img/classics.png" alt="drink" /></div><h5>Classics</h5></div></Link>
+      <Link to='/shots'> <div><div><img src="./img/shot.png" alt="drink" /></div><h5>Shots</h5></div></Link>
+      <Link to='/shots'> <div><div><img src="./img/longdrinks.png" alt="drink" /></div><h5>Long Drinks</h5></div></Link>
+      <Link to='/creamy'> <div><div><img src="./img/creamy.png" alt="drink" /></div><h5>Creamy</h5></div></Link>
+      <Link to='/punch'> <div><div><img src="./img/punch.png" alt="drink" /></div><h5>Punch</h5></div></Link>
+      <Link to='/mocktails'> <div><div><img src="./img/mocktail.png" alt="drink" /></div><h5>Mocktails</h5></div></Link>
 
-  <div> <img src="./img/c.png" alt="drink" /></div>
-  <div> <img src= "./img/drink.png"alt="drink"/></div>
-      <div> <img src="./img/drink.png" alt="drink" /></div>
-      <div> <img src="./img/c.png" alt="drink"/></div>
+  {/* <div> <img src="./img/classics.png" alt="drink" /></div>
+  <div> <img src= "./img/shot.png"alt="drink"/></div>
+      <div> <img src="./img/longdrinks.png" alt="drink" /></div>
+      <div> <img src="./img/creamy.png" alt="drink" /></div>
+      <div> <img src="./img/punch.png" alt="drink" /></div>
+      <div> <img src="./img/mocktail.png" alt="drink"/></div> */}
 </Carousel>
   );
 };
