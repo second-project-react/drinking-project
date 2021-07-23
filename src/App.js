@@ -12,6 +12,7 @@ import CreamyList from './components/slider/Creamy'
 import PunchList from './components/slider/PunchList';
 import ClassicsList from './components/slider/ClassicsList'
 import Cocktail from './components/slider/Cocktail'
+import ModalDisplay from './components/slider/ModalDisplay'
 
 import {Container} from "react-bootstrap";
 
@@ -49,19 +50,19 @@ function App() {
           <Route path='/popular' component={Popular} />          */}
 
             <Route path='/shots' exact component={ShotsList} />
-            <Route path='/shots/:id' exact component={Cocktail} />
+        
          
             <Route path='/mocktails' exact component={MocktailsList} />
-            <Route path='/mocktails/:id' exact component={Cocktail} />
+          
             
             <Route path='/creamy' exact component={CreamyList}/>
-            <Route path='/creamy/:id' exact component={Cocktail} />
+        
 
             <Route path='/classics' exact component={ClassicsList}/>
-            <Route path='/classics/:id' exact component={Cocktail} />
+         
 
             <Route path='/punch' exact component={PunchList}/>
-            <Route path='/punch/:id' exact component={Cocktail} />
+          
           </Switch>
           </div>
           </div>
