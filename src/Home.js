@@ -71,31 +71,28 @@ const Home = (props) => {
 
          <div className="bottomPart">
 
-       <div className="secondRow">
+         <div className="secondRow">
 
-         <Surprise />
+<Surprise />
 
-         <Carousel responsive={responsive}>
+<Carousel responsive={responsive}>
 
-        <Link to='/shots'><div><img src='./img/butterfly.png' alt=""></img><h5>Shots</h5></div></Link>
+<Link to='/shots'><div><img src='./img/butterfly.png' alt=""></img><h5>Shots</h5></div></Link>
 
-        <Link to='/mocktails'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Mocktails</h5></div></Link>
+<Link to='/mocktails'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Mocktails</h5></div></Link>
 
-        <Link to='/creamy'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Creamy</h5></div></Link>
+<Link to='/creamy'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Creamy</h5></div></Link>
 
-        <Link to='/classics'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Classics</h5></div></Link>
+<Link to='/classics'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Classics</h5></div></Link>
 
-        <Link to='/punch'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Punch</h5></div></Link>
-       
-      </Carousel>
+<Link to='/punch'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Punch</h5></div></Link>
+
+</Carousel>
+
+</div>
+
 
       </div>
-
-
-        
-
-    </div>
-
    
       <Ingredient />
 
