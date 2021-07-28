@@ -1,5 +1,5 @@
 
-import { Container,Row, Col} from "react-bootstrap";
+import { Container,Row, Col, Spinner} from "react-bootstrap";
 import Axios from 'axios'
 import React, {  useEffect,useState } from 'react';
 import IngredientCard from "./IngredientCard";
@@ -7,21 +7,20 @@ import './MultiIngredient.css'
 
 const MultiIngredient = () => {
    const [searchValue, setSearchValue] = React.useState("");
-   const [ingredient, setIngredient] = useState([]);
+   const [ingredients, setIngredients] = useState([]);
    const [selectIngredient, setSelectIngredient] = useState([]);
-   const [displayIngredient, setDisplayIngredient] = useState([])
+   const [displayItems, setDisplayItems] = useState([])
+   const [isLoading, setIsLoading] = useState(true);
+
 
    useEffect(() => {
       Axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/list.php?i=list')
          .then((response) => {
-            // setRandom(response.data.drinks[0])
             console.log(response.data.drinks)
             const ingredientList = response.data.drinks.map((item) => {
-                   // setRandom(response.data.drinks[0])
-           return {...item, selected:false}
+            return {...item, selected:false}
             })
-            console.log(ingredientList)
-         setIngredient(ingredientList)
+            setIngredients(ingredientList)
       })
       .catch((error)=>{
         console.log(error)
@@ -44,7 +43,8 @@ const MultiIngredient = () => {
       Axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${ingString}`)
       .then((response)=>{
          console.log(response.data.drinks)
-         setDisplayIngredient(response.data.drinks)
+         setDisplayItems([...response.data.drinks]);
+         setIsLoading(false);
       })
       .catch((error)=>{
         console.log(error)
@@ -53,22 +53,39 @@ const MultiIngredient = () => {
    
    
    const itemClicked = (item) => {
-
       item.selected = !item.selected;
-         
-      console.log(ingredient)
-      setIngredient([...ingredient])
+      setIsLoading(true);  
+      setIngredients([...ingredients])
       let newArr = [];
-      for (let i = 0; i < ingredient.length; i++){
-         if (ingredient[i].selected) {
-            newArr.push((ingredient[i]))
+      for (let i = 0; i < ingredients.length; i++){
+         if (ingredients[i].selected) {
+            newArr.push((ingredients[i]));
          }
-      }setSelectIngredient([...newArr])
-    }
-    console.log(selectIngredient)
+      }
+      setSelectIngredient([...newArr]);
+   }
+   
+
+   const deleteIngredient = (index,name) => {
+      console.log(name)
+      selectIngredient.splice(index, 1);
+      setSelectIngredient([...selectIngredient]);
+      const ingredientList = ingredients.map((item) => {
+         if (item.strIngredient1 === name) {
+            console.log(item.strIngredient1)
+            item.selected = false;
+         }
+         return { ...item }
+         })
+      setIngredients([...ingredientList])
+      
+      console.log("ing",ingredients)
+   }
+
+   
 
    const  listItems =
-         ingredient
+   ingredients
             .filter((item) => ((item.strIngredient1).toLowerCase()).includes((searchValue).toLowerCase()))
             .map((item, index) => {
                return (
@@ -84,7 +101,6 @@ const MultiIngredient = () => {
                )
             });
 
-   console.log(ingredient)
 
 
    // const display =
@@ -100,7 +116,7 @@ const MultiIngredient = () => {
          
             <div className="muliTitleDiv">
             <div className="muliTitle">
-               <h1 ClassNAme="muliTitleh1">Search Cocktails By Ingredients</h1>
+               <h1 ClassNAme="muliTitleh1">SEARCH BY INGREDIENTS</h1>
   
              
             </div>
@@ -118,11 +134,11 @@ const MultiIngredient = () => {
                         <p className='multiSelected'> Selected Ingredients : </p>
                 
                       
-                           {selectIngredient.map((items) => <div class="chip">
+                           {selectIngredient.map((items, index) => <button class="chip" onClick={()=>(deleteIngredient(index,items.strIngredient1))}>
                               {items.strIngredient1}
-                              <span class="closebtn" onclick="">  &times;</span>
+                              <span class="closebtn">  &times;</span>
                               
-                              </div> ) }
+                              </button> ) }
               
                   </div>
                   <div id="listIngredient" >
@@ -132,8 +148,11 @@ const MultiIngredient = () => {
                   </div>
             </Col>
             <Col xs={8}>
-             <div className="multiCardList">
-               {displayIngredient !== 'None Found' ? displayIngredient.map((items) => <IngredientCard cocktailList={items}/>) : <h1> No Matches Found</h1>}
+                  <div className="multiCardList">
+                     { isLoading ?
+                        <Spinner animation="border" variant="dark" /> :
+                        (displayItems[0] !== 'N' ? displayItems.map((items) => <IngredientCard cocktailList={items} />) : <h1> No Matches Found</h1>)
+                     }
                </div>
             </Col>
          </Row>

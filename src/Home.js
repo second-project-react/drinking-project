@@ -15,6 +15,7 @@ import "react-multi-carousel/lib/styles.css";
 import Ingredient from "./components/Ingredient";
 
 import CarouselTop from "./components/CarouselTop";
+import CarouselSecond from "./components/CarouselSecond";
 
 
 
@@ -23,47 +24,13 @@ const Home = (props) => {
 
    
 
-  const responsive = {
-
-   desktop: {
-
-     breakpoint: { max: 3000, min: 1024 },
-
-     items: 3,
-
-     slidesToSlide: 3 // optional, default to 1.
-
-   },
-
-   tablet: {
-
-     breakpoint: { max: 1024, min: 464 },
-
-     items: 2,
-
-     slidesToSlide: 2 // optional, default to 1.
-
-   },
-
-   mobile: {
-
-     breakpoint: { max: 464, min: 0 },
-
-     items: 1,
-
-     slidesToSlide: 1 // optional, default to 1.
-
-   }
-
-   };
+  
 
    return (
 
       <Container fluid className="Home p-0">
 
          <div className="topPart">
-
-            <h1>The Cocktail Bar</h1>
 
             <CarouselTop />
 
@@ -75,9 +42,9 @@ const Home = (props) => {
 
 <Surprise />
 
-<Carousel responsive={responsive}>
 
-<Link to='/shots'><div><img src='./img/butterfly.png' alt=""></img><h5>Shots</h5></div></Link>
+
+{/* <Link to='/shots'><div><img src='./img/butterfly.png' alt=""></img><h5>Shots</h5></div></Link>
 
 <Link to='/mocktails'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Mocktails</h5></div></Link>
 
@@ -85,9 +52,9 @@ const Home = (props) => {
 
 <Link to='/classics'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Classics</h5></div></Link>
 
-<Link to='/punch'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Punch</h5></div></Link>
+<Link to='/punch'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Punch</h5></div></Link> */}
 
-</Carousel>
+
 
 </div>
 
@@ -95,7 +62,8 @@ const Home = (props) => {
     </div>
 
    
-      <Ingredient />
+       <Ingredient />
+       <CarouselSecond />
 
     </Container>
 

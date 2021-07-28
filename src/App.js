@@ -6,13 +6,13 @@ import Home from './Home';
 
 import Sidebar from './components/Sidebar';
 import Navigation from './components/Navbar'
-import ShotsList from './components/slider/Shots'
-import MocktailsList from './components/slider/Mocktails'
-import CreamyList from './components/slider/Creamy'
-import PunchList from './components/slider/PunchList';
-import ClassicsList from './components/slider/ClassicsList'
-import Cocktail from './components/slider/Cocktail'
-import ModalDisplay from './components/slider/ModalDisplay'
+import ShotsList from './components/mainCarousel/Shots'
+import MocktailsList from './components/mainCarousel/Mocktails'
+import CreamyList from './components/mainCarousel/Creamy'
+import PunchList from './components/mainCarousel/PunchList';
+import ClassicsList from './components/mainCarousel/ClassicsList'
+import Cocktail from './components/mainCarousel/Cocktail'
+import ModalDisplay from './components/mainCarousel/ModalDisplay'
 
 import {Container} from "react-bootstrap";
 
