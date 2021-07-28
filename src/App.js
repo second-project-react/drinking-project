@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -30,8 +30,11 @@ import Vodka from './components/pages/spirits/Vodka'
 
 
 
-function App() {
+import Ingredient from './components/Ingredient';
 
+
+// process.env.REACT_APP_SECRET_KEY
+function App() {
   
 
   return (
