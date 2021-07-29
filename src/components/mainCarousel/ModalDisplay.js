@@ -13,10 +13,19 @@ function ModalDisplay(props) {
   const arrayOfIngredients = [];
   let allLiOfIngridientsAndMeasure = [];
   const arrayOfMeasure = [];
+<<<<<<< HEAD:src/components/mainCarousel/ModalDisplay.js
   
   useEffect(() => {
     setCocktailID(props.cocktailid);
     Axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${cocktailId}`)
+=======
+
+  useEffect(() => {
+
+    // setCocktailID(props.cocktailid);
+    // console.log(cocktailId)
+    Axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${props.cocktailid}`)
+>>>>>>> 8795329df21de24f930888c41b01040b9799c97f:src/components/mainCarousel/ModalDisplay.js
         .then((response) => response.data)
        .then((data)=>{
         setValue(data.drinks[0]);
@@ -25,7 +34,11 @@ function ModalDisplay(props) {
        .catch((error)=>{
          console.log(error)
        })
+<<<<<<< HEAD:src/components/mainCarousel/ModalDisplay.js
   }, [cocktailId, props.cocktailid])
+=======
+  }, [cocktailId,props.cocktailid])
+>>>>>>> 8795329df21de24f930888c41b01040b9799c97f:src/components/mainCarousel/ModalDisplay.js
 
    for(let i=1; i<=15; i++){
       arrayOfIngredients.push(value['strIngredient'+i])
@@ -67,7 +80,12 @@ return (
           <Spinner animation="border" variant="warning" />
           </div>
           :
+<<<<<<< HEAD:src/components/mainCarousel/ModalDisplay.js
           <div className="cocktail">
+=======
+        <div className="cocktail">
+         
+>>>>>>> 8795329df21de24f930888c41b01040b9799c97f:src/components/mainCarousel/ModalDisplay.js
            <h2 className="card1_drinkName">{value.strDrink}</h2>
            <h5 className="drinkCategory">{value.strAlcoholic}</h5>
             {/* <h5 className="drinkCategory">{value.strGlass}</h5> */}

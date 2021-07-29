@@ -116,7 +116,7 @@ const MultiIngredient = () => {
          
             <div className="muliTitleDiv">
             <div className="muliTitle">
-               <h1 ClassNAme="muliTitleh1">SEARCH BY INGREDIENTS</h1>
+               <h1 ClassName="muliTitleh1">SEARCH BY INGREDIENTS</h1>
   
              
             </div>
