@@ -1,3 +1,8 @@
+.home {
+   display: flex;
+   flex-direction: column;
+}
+
 .topPart{
    height:55vh;
    width:100%;
@@ -9,7 +14,6 @@
 }
 
 .bottomPart{
-   overflow: hidden;
    height:50%;
    width:100%;
    /* background-color:#ffffff; */

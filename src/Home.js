@@ -1,21 +1,12 @@
 import React from "react";
-
-import { Container } from "react-bootstrap";
-
-import { Link } from 'react-router-dom'
+import './Home.css'
 
 import Surprise from './components/Surprise'
 
-import Carousel from "react-multi-carousel";
-
-import './Home.css'
-
 import "react-multi-carousel/lib/styles.css";
-
-import Ingredient from "./components/Ingredient";
-
 import CarouselTop from "./components/CarouselTop";
 import CarouselSecond from "./components/CarouselSecond";
+import { Container } from "react-bootstrap";
 
 
 
@@ -61,8 +52,6 @@ const Home = (props) => {
 
     </div>
 
-   
-       <Ingredient />
        <CarouselSecond />
 
     </Container>
