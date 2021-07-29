@@ -13,10 +13,12 @@ function ModalDisplay(props) {
   const arrayOfIngredients = [];
   let allLiOfIngridientsAndMeasure = [];
   const arrayOfMeasure = [];
-  
+
   useEffect(() => {
-    setCocktailID(props.cocktailid);
-    Axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${cocktailId}`)
+
+    // setCocktailID(props.cocktailid);
+    // console.log(cocktailId)
+    Axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${props.cocktailid}`)
         .then((response) => response.data)
        .then((data)=>{
         setValue(data.drinks[0]);
@@ -67,7 +69,8 @@ return (
           <Spinner animation="border" variant="warning" />
           </div>
           :
-          <div className="cocktail">
+        <div className="cocktail">
+         
            <h2 className="card1_drinkName">{value.strDrink}</h2>
            <h5 className="drinkCategory">{value.strAlcoholic}</h5>
             {/* <h5 className="drinkCategory">{value.strGlass}</h5> */}
