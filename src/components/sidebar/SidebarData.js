@@ -48,7 +48,7 @@ export const SidebarData = [
     },
     {
         title: 'Ingredients',
-        path: '/ingredients',
+        path: '/multi-ingredients',
         icon: <GiIcons.GiCutLemon />,
     },
     {

@@ -6,6 +6,7 @@ import Surprise from './components/Surprise'
 import "react-multi-carousel/lib/styles.css";
 import CarouselTop from "./components/CarouselTop";
 import CarouselSecond from "./components/CarouselSecond";
+import { Container } from "react-bootstrap";
 
 
 
