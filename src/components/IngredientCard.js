@@ -1,14 +1,34 @@
 import './MultiIngredient.css'
+import ModalDisplay from './mainCarousel/ModalDisplay';
+import React, { useEffect, useState } from 'react';
 
-function IngredientCard ({ cocktailList }) {
+function IngredientCard({ cocktailList }) {
+  const [cardValue, setCardValue] = useState(false);
+  // const[idValue,setIDValue]= useState('');
+  const clickHandler = (id) => {
+    setCardValue(true)
+    // setIDValue(id)
+    // console.log(idValue)
+    console.log(cocktailList.idDrink)
+  }
+
    return (
      <div>
+       <div onClick={()=>clickHandler() }>
+       
          <img src={cocktailList.strDrinkThumb} alt={cocktailList.strDrink} className='multiCardImg' />
        
-       <h5 className='multidrinkName'>{cocktailList.strDrink}</h5>
+         <h5 className='multidrinkName'>{cocktailList.strDrink}</h5>
+     
+         </div>
+       <ModalDisplay
+        cocktailid={cocktailList.idDrink}
+        show={cardValue}
+        onHide={() => setCardValue(false)} />
        
      </div>
-   )
+  )
+  
  }
  
  

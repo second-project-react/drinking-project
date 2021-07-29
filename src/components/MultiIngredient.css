@@ -73,10 +73,11 @@ font-family: 'Montserrat', sans-serif;
       scrollbar-width: thin;          /* "auto" or "thin" */
       scrollbar-color: #FDBCBF white; 
 
+
       
 }
 #listIngredient::-webkit-scrollbar {
-   width: 12px;               /* width of the entire scrollbar */
+   width: 10px;               /* width of the entire scrollbar */
  }
  
  #listIngredient::-webkit-scrollbar-track {
@@ -85,9 +86,10 @@ font-family: 'Montserrat', sans-serif;
  
  #listIngredient::-webkit-scrollbar-thumb {
    background-color:  #FDBCBF;    /* color of the scroll thumb */
-   border-radius: 20px;       /* roundness of the scroll thumb */
-   /* border: 0.5px solid gray;  creates padding around scroll thumb */
- }
+   border-radius: 10px;       /* roundness of the scroll thumb */
+ /* border: 2px solid gray;   */
+   /* creates padding around scroll thumb */
+ } 
 .ingredientImage{
    filter: contrast(140%)
 }
@@ -107,9 +109,11 @@ font-family: 'Montserrat', sans-serif;
       /* background-color: #FDBCBF; */
       margin: 2px;
       cursor: pointer;
-      transition: 1s ease-in-out;
+      transition: 0.65s ease-in-out;
     }
-
+    .chipMain:hover{
+      background-color: #FFD977;
+    }
 .chipActive{
    background-color: #FFD977;
 }
@@ -146,12 +150,27 @@ font-family: 'Montserrat', sans-serif;
    border: 1px solid white;
    filter: contrast(125%);
    box-shadow:1px 0.5px 0.5px white;
+   transition: all 0.25s ease-in-out;
+
 }
+.multiCardImg:hover{
+   transform:scale(1.13);
+
+}
+
+
 
 .multidrinkName {
    font-family: 'Montserrat', sans-serif;
-   font-weight: 400;
+   font-weight: 500;
    font-size: 20px;
    margin: 5px 0 40px 0;
    width: 200px;
+   cursor: pointer;
+   transition: font-weight 0.7s ease-in-out;
+
+}
+.multidrinkName:hover{
+   font-weight: 600;
+  
 }

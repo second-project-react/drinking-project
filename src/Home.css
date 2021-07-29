@@ -1,10 +1,11 @@
 .topPart{
-   height:50vh;
+   height:55vh;
    width:100%;
    background: linear-gradient(90deg, #F8C23A 6.04%, #FDBD84 22.45%, #FF9BA1 39.39%, #FDBD81 57.15%, #F8C23A 69.86%);
    opacity: 0.77;
    margin:auto;
    text-align:center;
+   padding-top: 30px;
 }
 
 .bottomPart{
@@ -16,7 +17,6 @@
    text-align:center;
    color:black;
 }
-
 .secondRow {
    margin-top: 100px;
    display: flex;

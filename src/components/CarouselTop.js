@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-
+import  "./CarouselTop.css";
 import { Link } from 'react-router-dom'
 
 
@@ -63,12 +63,12 @@ const CarouselTop = ({ deviceType }) => {
       }}
   
 >
-<Link to='/classics'> <div><div><img src="./img/classics.png" alt="drink" /></div><h5>Classics</h5></div></Link>
-      <Link to='/shots'> <div><div><img src="./img/shot.png" alt="drink" /></div><h5>Shots</h5></div></Link>
-      <Link to='/shots'> <div><div><img src="./img/longdrinks.png" alt="drink" /></div><h5>Long Drinks</h5></div></Link>
-      <Link to='/creamy'> <div><div><img src="./img/creamy.png" alt="drink" /></div><h5>Creamy</h5></div></Link>
-      <Link to='/punch'> <div><div><img src="./img/punch.png" alt="drink" /></div><h5>Punch</h5></div></Link>
-      <Link to='/mocktails'> <div><div><img src="./img/mocktail.png" alt="drink" /></div><h5>Mocktails</h5></div></Link>
+      <div><Link to='/classics'> <div className="carouselTopImage"><img src="./img/classics.png" alt="drink" /></div><h5 className="carouselTopLinks">Classics</h5></Link></div>
+       <div><Link to='/shots'><div className="carouselTopImage"><img src="./img/shot.png" alt="drink" /></div><h5 className="carouselTopLinks">Shots</h5></Link></div>
+      <div> <Link to='/shots'> <div className="carouselTopImage"><img src="./img/longdrinks.png" alt="drink" /></div><h5 className="carouselTopLinks">Long Drinks</h5> </Link> </div>
+       <div><Link to='/creamy'><div className="carouselTopImage"><img src="./img/creamy.png" alt="drink" /></div><h5 className="carouselTopLinks">Creamy</h5></Link></div>
+       <div><Link to='/punch'><div className="carouselTopImage"><img src="./img/punch.png" alt="drink" /></div><h5 className="carouselTopLinks">Punch</h5></Link></div>
+      <div><Link to='/punch'><div className="carouselTopImage"><img src="./img/mocktail.png" alt="drink" /></div><h5 className="carouselLinks">Mocktails</h5></Link></div>
 
   {/* <div> <img src="./img/classics.png" alt="drink" /></div>
   <div> <img src= "./img/shot.png"alt="drink"/></div>

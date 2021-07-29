@@ -26,7 +26,6 @@ function DrinkCard (props){
     <div>
     <img src={props.drinkImage} alt="props.shotsName" className='img' onClick={() => setModalShow(true)  }/>
       <h5 className='drinkName'>{props.drinkName}</h5>
-      {console.log(props.drinkId)}
       <ModalDisplay
         cocktailid={props.drinkId}
         show={modalShow}
