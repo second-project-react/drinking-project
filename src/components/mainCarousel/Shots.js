@@ -10,7 +10,7 @@ export default function ShotsList() {
     
     useEffect(()=> {
         axios
-        .get(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Shot`) 
+        .get('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Shot') 
         .then((data) => {
             setShots(data.data.drinks)
         })
@@ -18,8 +18,8 @@ export default function ShotsList() {
         .catch((error)=> {
             console.log(error)
         })
-        }, [])
-
+    }, [])
+    
     return (
         <div className='mainDiv'>
             <h2 className='drinkType'>SHOTS</h2>

@@ -1,7 +1,6 @@
 
 import Carousel from "react-multi-carousel";
-import ModalDisplay from './mainCarousel/ModalDisplay'
-import { Link, } from 'react-router-dom'
+
 import axios from 'axios'
 import { React, useEffect, useRef, useState } from "react";
 import CarouselSecondCard from "./CarouselSecondCard";

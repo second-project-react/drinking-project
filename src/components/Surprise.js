@@ -1,5 +1,5 @@
 import './Surprise.css';
-import { RefreshCcw } from 'react-feather';
+import { Code, RefreshCcw } from 'react-feather';
 import Axios from 'axios'
 import React, {  useState } from 'react';
 
@@ -21,9 +21,32 @@ const Surprise = () => {
    const [random, setRandom] = useState(getRandom)
 
 
+   // Animation Code
+
+
+   const [timer, setTimer] = React.useState(0);
+
+  React.useEffect(() => {
+    console.log("timer started!");
+    const interval = setInterval(() => {
+      setTimer((prevState) => prevState + 1);
+    }, 10);
+    return () => {
+      clearInterval(interval);
+      console.log("timer stopped");
+    };
+  }, []);
+
+   
+
+
+
+
+
+
    return(
       <div className="surpriseWrapper">
-         <div className="surpriseTitleWrapper">
+         {/* <div className="surpriseTitleWrapper">
             <h2 className="surpriseTitle">Surprise Me!</h2>
             <div className="surpriseRefresh" onClick={getRandom}><RefreshCcw size={30}/></div>
          </div>
@@ -35,7 +58,22 @@ const Surprise = () => {
          </div>
          <div  className="surpriseDesc">
             <h3>{random?.strDrink}</h3>
-         </div>
+         </div> */}
+
+<div id="loader">
+    <div id="lemon" style={timer >=100 ? {opacity: 1} : {opacity: 0} }></div>
+    <div id="straw"></div>
+    <div id="glass">
+        <div id="cubes">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+               <div id="drink" style={{top: (100-timer*.9)+'%'}}></div>
+        <span id="counter"></span>
+    </div>
+    <div id="coaster"></div>
+</div>
 
       </div>
    );
