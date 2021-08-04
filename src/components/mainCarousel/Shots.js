@@ -18,8 +18,8 @@ export default function ShotsList() {
         .catch((error)=> {
             console.log(error)
         })
-        }, [])
-
+    }, [])
+    
     return (
         <div className='mainDiv'>
             <h2 className='drinkType'>SHOTS</h2>

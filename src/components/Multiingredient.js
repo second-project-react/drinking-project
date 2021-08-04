@@ -116,11 +116,11 @@ const MultiIngredient = () => {
          
             <div className="muliTitleDiv">
             <div className="muliTitle">
-               <h1 ClassName="muliTitleh1">SEARCH BY INGREDIENTS</h1>
+               <h1 ClassName="muliTitleh1">Search By Ingredients</h1>
   
              
             </div>
-               <hr className="custom-hr" size="50" width="40%" ></hr>
+               {/* <hr className="custom-hr" size="50" width="40%" ></hr> */}
                </div>
             <Row>
                

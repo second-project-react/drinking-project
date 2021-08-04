@@ -68,7 +68,7 @@ const CarouselTop = ({ deviceType }) => {
       <div> <Link to='/shots'> <div className="carouselTopImage"><img src="./img/longdrinks.png" alt="drink" /></div><h5 className="carouselTopLinks">Long Drinks</h5> </Link> </div>
        <div><Link to='/creamy'><div className="carouselTopImage"><img src="./img/creamy.png" alt="drink" /></div><h5 className="carouselTopLinks">Creamy</h5></Link></div>
        <div><Link to='/punch'><div className="carouselTopImage"><img src="./img/punch.png" alt="drink" /></div><h5 className="carouselTopLinks">Punch</h5></Link></div>
-      <div><Link to='/punch'><div className="carouselTopImage"><img src="./img/mocktail.png" alt="drink" /></div><h5 className="carouselLinks">Mocktails</h5></Link></div>
+      <div><Link to='/mocktails'><div className="carouselTopImage"><img src="./img/mocktail.png" alt="drink" /></div><h5 className="carouselLinks">Mocktails</h5></Link></div>
 
   {/* <div> <img src="./img/classics.png" alt="drink" /></div>
   <div> <img src= "./img/shot.png"alt="drink"/></div>

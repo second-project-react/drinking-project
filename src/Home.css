@@ -4,13 +4,18 @@
 }
 
 .topPart{
-   height:55vh;
+   height:70vh;
    width:100%;
-   background: linear-gradient(90deg, #F8C23A 6.04%, #FDBD84 22.45%, #FF9BA1 39.39%, #FDBD81 57.15%, #F8C23A 69.86%);
-   opacity: 0.77;
+   /* background: linear-gradient(90deg, #F8C23A 6.04%, #FDBD84 22.45%, #FF9BA1 39.39%, #FDBD81 57.15%, #F8C23A 69.86%);
+
+
+   opacity: 0.65; */
+
+   background: linear-gradient(30.11deg, #FFFFFF -11.43%, #FFEE93 13.8%, #F0D7BF 47.62%, #95D1EB 86.69%);
+opacity: 0.85;
    margin:auto;
    text-align:center;
-   padding-top: 30px;
+   padding-top: 70px;
 }
 
 
