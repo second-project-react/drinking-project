@@ -10,7 +10,7 @@ export default function ShotsList() {
     
     useEffect(()=> {
         axios
-        .get(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Shot`) 
+        .get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?c=Shot`) 
         .then((data) => {
             setShots(data.data.drinks)
         })

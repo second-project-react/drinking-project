@@ -32,6 +32,7 @@
 
 
 .card1_drinkName {
+    display: flex;
     font-family: 'Oswald' , sans-serif;
     font-size: 30px;
     font-weight: 700;

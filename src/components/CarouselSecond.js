@@ -51,7 +51,7 @@ const CarouselSecond = ({ deviceType }) => {
    
   useEffect(() => {
     axios
-      .get(`https://www.thecocktaildb.com/api/json/v2/9973533/latest.php`)
+      .get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/latest.php`)
       .then((response) => response.data)
       .then((data) => {
         //console.log(data.data.drinks);

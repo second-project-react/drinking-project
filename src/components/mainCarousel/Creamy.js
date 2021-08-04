@@ -10,7 +10,7 @@ export default function CreamyList() {
     
     useEffect(()=> {
         axios
-        .get(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Milk_/_Float_/_Shake`) 
+        .get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?c=Milk_/_Float_/_Shake`) 
         .then((data) => {
             setShots(data.data.drinks)
         })

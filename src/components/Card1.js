@@ -7,7 +7,7 @@ function Card1(){
     const [value, setValue]= useState({})
   
     useEffect(()=>{
-       Axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=15300')
+       Axios.get('https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/lookup.php?i=15300')
             .then((response) => response.data)
          .then((data)=>{
              setValue(data.drinks[0])

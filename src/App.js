@@ -21,6 +21,9 @@ import Rum from './components/pages/spirits/Rum'
 import Scotch from './components/pages/spirits/Scotch'
 import Tequila from './components/pages/spirits/Tequila'
 import Vodka from './components/pages/spirits/Vodka'
+// // Lists of drinks
+import Popular from './components/pages/Popular';
+import Latest from './components/pages/Latest';
 
 
 
@@ -49,6 +52,8 @@ function App() {
             <Route path='/creamy' exact component={CreamyList} />
             <Route path='/classics' exact component={ClassicsList} />
             <Route path='/punch' exact component={PunchList} />
+            {/* Multi-ingridients */}
+            <Route path='/multi-ingredients' exact component={Ingredient} />
             {/* Spirits */}
             <Route path='/bourbon' exact component={Bourbon} />
             <Route path='/brandy' exact component={Brandy} />
@@ -58,8 +63,12 @@ function App() {
             <Route path='/scotch' exact component={Scotch} />
             <Route path='/tequila' exact component={Tequila} />
             <Route path='/vodka' exact component={Vodka} />
-
-            <Route path='/multi-ingredients' exact component={Ingredient} />
+            {/* Popular */}
+            <Route path='/popular' exact component={Popular} />
+            {/* Latest */}
+            <Route path='/latest' exact component={Latest} />
+            {/* Surprise me */}
+            <Route path='/surprise' exact component={Popular} />
 
 
           </Switch>

@@ -10,7 +10,7 @@ export default function PunchList() {
     
     useEffect(()=> {
         axios
-        .get(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Punch_/_Party Drink`) 
+        .get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?c=Punch_/_Party Drink`) 
         .then((data) => {
             setShots(data.data.drinks)
         })

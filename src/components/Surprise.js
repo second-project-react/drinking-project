@@ -9,7 +9,7 @@ const Surprise = () => {
   
   
    const getRandom = () => {
-      Axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/random.php')
+      Axios.get('https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/random.php')
       .then((response)=>{
          setRandom(response.data.drinks[0])
          return response.data.drinks[0]

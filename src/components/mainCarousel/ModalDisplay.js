@@ -18,7 +18,7 @@ function ModalDisplay(props) {
 
     // setCocktailID(props.cocktailid);
     // console.log(cocktailId)
-    Axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${props.cocktailid}`)
+    Axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/lookup.php?i=${props.cocktailid}`)
         .then((response) => response.data)
        .then((data)=>{
         setValue(data.drinks[0]);

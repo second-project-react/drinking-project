@@ -10,7 +10,7 @@ export default function MocktailsList() {
     
     useEffect(()=> {
         axios
-        .get(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Soft_Drink_/_Soda`) 
+        .get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?c=Soft_Drink_/_Soda`) 
         .then((data) => {
             setShots(data.data.drinks)
         })

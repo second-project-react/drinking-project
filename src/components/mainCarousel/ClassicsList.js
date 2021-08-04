@@ -10,7 +10,7 @@ export default function ClassicsList() {
     
     useEffect(()=> {
         axios
-        .get(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Ordinary_Drink`) 
+        .get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?c=Ordinary_Drink`) 
         .then((data) => {
             setShots(data.data.drinks)
         })
