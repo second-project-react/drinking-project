@@ -22,33 +22,26 @@ const Home = (props) => {
       <Container fluid className="Home p-0">
 
          <div className="topPart">
-
             <CarouselTop />
-
          </div>
 
-         <div className="bottomPart">
-
          <div className="secondRow">
-
-<Surprise />
-
-
-
-{/* <Link to='/shots'><div><img src='./img/butterfly.png' alt=""></img><h5>Shots</h5></div></Link>
-<Link to='/mocktails'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Mocktails</h5></div></Link>
-<Link to='/creamy'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Creamy</h5></div></Link>
-<Link to='/classics'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Classics</h5></div></Link>
-<Link to='/punch'><div><img src='./img/group9.png' style={{ width: "200px" }} alt=""></img><h5>Punch</h5></div></Link> */}
-
-
-
-</div>
-
-
+           <div>
+              <img src="./img/latest-butterfly.png" alt=""/>
+               {/* <Surprise /> */}
+           </div>
+            
+            
+            {/* <div className="latestRow"> 
+       <CarouselSecond />
+    </div> */}
+       
+         </div>
+    <div className="latestRow"> 
+       <CarouselSecond />
     </div>
 
-       <CarouselSecond />
+      
 
     </Container>
 
