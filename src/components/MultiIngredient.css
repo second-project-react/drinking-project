@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-.multiIngredient{
+/* .multiIngredient{
    background: linear-gradient(90.21deg, #FFEDC1 6.22%, #FFDFC3 28.27%, #FEDDDF 59.88%, #FFECBC 91.95%);
-opacity: 0.77;}
+opacity: 0.77;} */
  
 
 
@@ -17,8 +17,8 @@ opacity: 0.77;}
 }
 .muliTitle{
   
-   padding:20px;
-   margin-top:30px;
+   /* padding:20px;
+   margin-top:30px; */
    margin-left:40px;
 }
  .custom-hr {
@@ -37,11 +37,13 @@ margin-left:20px;
 font-family: 'Montserrat', sans-serif;
 }
 .selectBox{
- background: #FDF9F9; 
+ /* background: #FDF9F9;  */
+ background-color: #FFF4E7;
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
    border-radius: 41px;
    margin-top: 50px;
-   border:1px solid black;
+   border:1px solid gray;
+   box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 10%);
    
 }
 
@@ -91,7 +93,8 @@ font-family: 'Montserrat', sans-serif;
    /* creates padding around scroll thumb */
  } 
 .ingredientImage{
-   filter: contrast(140%)
+   filter: contrast(140%);
+ 
 }
 
 .chipMain
@@ -106,16 +109,18 @@ font-family: 'Montserrat', sans-serif;
       border:0.3px solid black;
       
       background: linear-gradient(89.83deg, #FDD1D3 -3.08%, rgba(253, 209, 211, 0) 126.09%);
-      /* background-color: #FDBCBF; */
+    
       margin: 2px;
       cursor: pointer;
       transition: 0.65s ease-in-out;
     }
     .chipMain:hover{
       background-color: #FFD977;
+      border:0.6px solid black;
     }
 .chipActive{
    background-color: #FFD977;
+   border:1.2px solid black;
 }
     
 
@@ -147,9 +152,9 @@ font-family: 'Montserrat', sans-serif;
  .multiCardImg {
    height: 160px;
    border-radius: 20px;
-   border: 1px solid white;
+   /* border: 1px solid white; */
    filter: contrast(125%);
-   box-shadow:1px 0.5px 0.5px white;
+   box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 30%);
    transition: all 0.25s ease-in-out;
 
 }

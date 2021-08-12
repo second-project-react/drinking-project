@@ -18,6 +18,7 @@ const Home = (props) => {
   
 
    return (
+      <div>
 
       <Container fluid className="Home p-0">
 
@@ -44,8 +45,10 @@ const Home = (props) => {
       
 
     </Container>
+    </div>
 
    )
+   
 
 }
 

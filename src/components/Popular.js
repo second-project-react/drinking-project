@@ -10,7 +10,7 @@ export default function Popular() {
     
     useEffect(()=> {
         axios
-        .get(`https://www.thecocktaildb.com/api/json/v2/9973533/popular.php`) 
+        .get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/popular.php`) 
         .then((data) => {
             setPopular(data.data.drinks)
         })

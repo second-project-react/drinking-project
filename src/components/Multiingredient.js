@@ -14,7 +14,7 @@ const MultiIngredient = () => {
 
 
    useEffect(() => {
-      Axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/list.php?i=list')
+      Axios.get('https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/list.php?i=list')
          .then((response) => {
             console.log(response.data.drinks)
             const ingredientList = response.data.drinks.map((item) => {
@@ -38,9 +38,9 @@ const MultiIngredient = () => {
             ingString = ingString + selectIngredient[i].strIngredient1
          }
       }
-      // console.log('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i='+ingString)
+      // console.log('https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?i='+ingString)
 
-      Axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${ingString}`)
+      Axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?i=${ingString}`)
       .then((response)=>{
          console.log(response.data.drinks)
          setDisplayItems([...response.data.drinks]);
@@ -116,11 +116,11 @@ const MultiIngredient = () => {
          
             <div className="muliTitleDiv">
             <div className="muliTitle">
-               <h1 ClassName="muliTitleh1">SEARCH BY INGREDIENTS</h1>
+               <h1 ClassName="muliTitleh1">Search By Ingredients</h1>
   
              
             </div>
-               <hr className="custom-hr" size="50" width="40%" ></hr>
+               {/* <hr className="custom-hr" size="50" width="40%" ></hr> */}
                </div>
             <Row>
                
