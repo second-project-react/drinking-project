@@ -36,7 +36,7 @@ const responsive = {
       min: 465,
     },
 
-    items: 2,
+    items: 3,
     slidesToSlide: 2,
     partialVisibilityGutter: 30,
   },
