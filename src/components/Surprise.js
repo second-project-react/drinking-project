@@ -48,14 +48,13 @@ const Surprise = () => {
       <div className="surpriseWrapper">
          {/* <div className="surpriseTitleWrapper">
             <h2 className="surpriseTitle">Surprise Me!</h2>
-            <div className="surpriseRefresh" onClick={getRandom}><RefreshCcw size={30}/></div>
+            <div className="surpriseRefresh" onClick={getRandom}><RefreshCcw size={50}/></div>
          </div>
         
          <div className="surpriseImg"> 
-        
-
-            <img src={random?.strDrinkThumb} alt="random cocktail" />
+           <img src = './img/surpriseme.png' alt="random cocktail" />
          </div>
+         
          <div  className="surpriseDesc">
             <h3>{random?.strDrink}</h3>
          </div> */}

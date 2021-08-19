@@ -2,6 +2,8 @@ import React from 'react'
 import * as AiIcons from 'react-icons/ai'
 import * as RiIcons from 'react-icons/ri'
 import * as GiIcons from 'react-icons/gi'
+import * as BiIcons from 'react-icons/bi'
+import * as FaIcons from 'react-icons/fa'
 
 
 export const SidebarData = [
@@ -15,7 +17,7 @@ export const SidebarData = [
     {
         title: 'Category',
         // path: '',
-        icon: <AiIcons.AiFillHome />,
+        icon: <BiIcons.BiDrink />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
         subNav: [
@@ -61,58 +63,58 @@ export const SidebarData = [
             {
                 title: 'Bourbon',
                 path: '/bourbon',
-                icon: <GiIcons.GiWineGlass />
+                icon: <GiIcons.GiGlassShot />
             },
             {
                 title: 'Brandy',
                 path: '/brandy',
-                icon: <GiIcons.GiWineGlass />
+                icon: <GiIcons.GiGlassShot/>
             },
             {
                 title: 'Gin',
                 path: '/gin',
-                icon: <GiIcons.GiWineGlass />
+                icon: <GiIcons.GiGlassShot />
             },
             {
                 title: 'Liqueur',
                 path: '/liqueur',
-                icon: <GiIcons.GiWineGlass />
+                icon: <GiIcons.GiGlassShot/>
             },
             {
                 title: 'Rum',
                 path: '/rum',
-                icon: <GiIcons.GiWineGlass />
+                icon: <GiIcons.GiGlassShot />
             },
             {
                 title: 'Scotch',
                 path: '/scotch',
-                icon: <GiIcons.GiWineGlass />
+                icon: <GiIcons.GiGlassShot/>
             },
             {
                 title: 'Tequila',
                 path: '/tequila',
-                icon: <GiIcons.GiWineGlass />
+                icon: <GiIcons.GiGlassShot />
             },
             {
                 title: 'Vodka',
                 path: '/vodka',
-                icon: <GiIcons.GiWineGlass />
+                icon: <GiIcons.GiGlassShot/>
             }
         ]
     },
     {
         title: 'Popular',
         path: '/popular',
-        icon: <GiIcons.GiCutLemon />,
+        icon: <FaIcons.FaCocktail />,
     },
     {
         title: 'Latest',
         path: '/latest',
-        icon: <GiIcons.GiCutLemon />,
+        icon: <GiIcons.GiEmptyHourglass />,
     },
     {
         title: 'Surprise',
         path: '/surprise',
-        icon: <GiIcons.GiCutLemon />,
+        icon: <AiIcons.AiOutlineGift />,
     }
 ]

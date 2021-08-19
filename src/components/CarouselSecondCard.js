@@ -1,9 +1,11 @@
 import { React, useEffect, useRef, useState } from "react";
-import ModalDisplay from './mainCarousel/ModalDisplay'
+import ModalDisplay from './mainCarousel/ModalDisplay';
+import './CarouselSecond.css';
 
 const CarouselSecondCard = ({ displayItem, displayIndex }) => {
    
    const [modalDisplay, setModalDisplay] = useState(false);
+   
    const imageArray = [
       "./img/latest-butterfly.png",
       "./img/latest-mountain-bramble.png",
@@ -17,9 +19,9 @@ const CarouselSecondCard = ({ displayItem, displayIndex }) => {
       "./img/latest-elderflower.png",
    ];
    return (
-      <div>
-         <img src={imageArray[displayIndex]} alt="cocktailImage" onClick={()=>setModalDisplay(true)}/>
-         <h5> {displayItem.strDrink }</h5>
+      <div className="latestCard">
+         <img  src={imageArray[displayIndex]} alt="cocktailImage" onClick={()=>setModalDisplay(true)}/>
+         <h5 className="latestName"> {displayItem.strDrink }</h5>
 
          <ModalDisplay
             cocktailid={displayItem.idDrink}

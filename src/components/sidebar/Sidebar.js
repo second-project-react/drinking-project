@@ -6,16 +6,22 @@ import * as FaIcons from 'react-icons/fa'
 import { SidebarData } from './SidebarData'
 import Submenu from './SubMenu'
 import { IconContext } from 'react-icons/lib'
+import './Sidebar.css'
+
+
 
 const Nav = styled.div`
+    width: 100vw;
     background: white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
     height: 80px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: red;
-   
 `;
+
 
 const NavIcon = styled(Link)`
     margin-left: 2rem;
@@ -31,6 +37,7 @@ const NavIcon = styled(Link)`
      
     }
 `;
+
 
 const SidebarNav = styled.nav`
     background: #4C5760;
@@ -50,6 +57,9 @@ const SidebarNav = styled.nav`
 const SidebarWrap = styled.div`
     width: 100%;
 `;
+// const pageName = styled.h1`
+//   color: blue;
+// `;
 
 const Sidebar = () => {
     const [sidebar, setSidebar] = useState(false)
@@ -59,12 +69,14 @@ const Sidebar = () => {
 
     return (
         <>
+        
         <IconContext.Provider value={{ color: '#ADD8E6'}}>
             <Nav>
+                
                 <NavIcon to='#'>
                     <FaIcons.FaBars onClick={ShowSidebar}/>
-                    </NavIcon>
-                    
+                    </NavIcon> 
+                    <p className="pageName">THE COCKTAIL BAR</p>        
             </Nav>
             <SidebarNav sidebar={sidebar}>
                 <SidebarWrap>

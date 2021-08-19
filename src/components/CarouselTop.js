@@ -18,7 +18,7 @@ const responsive = {
 
   mobile: {
     breakpoint: {
-      max: 464,
+      max: 699,
       min: 0,
     },
 
@@ -30,7 +30,7 @@ const responsive = {
   tablet: {
     breakpoint: {
       max: 1024,
-      min: 200,
+      min: 700,
     },
 
     items: 2,
@@ -59,7 +59,6 @@ const CarouselTop = ({ deviceType }) => {
   dotListClass="custom-dot-list-style"
   itemClass="carousel-item-padding-40-px"
   afterChange={(previousSlide, { currentSlide, onMove }) => {
-    console.log(currentSlide)
       }}
   
 >
@@ -69,13 +68,6 @@ const CarouselTop = ({ deviceType }) => {
        <div><Link to='/creamy'><div className="carouselTopImage"><img src="./img/creamy.png" alt="drink" /></div><h5 className="carouselTopLinks">Creamy</h5></Link></div>
        <div><Link to='/punch'><div className="carouselTopImage"><img src="./img/punch.png" alt="drink" /></div><h5 className="carouselTopLinks">Punch</h5></Link></div>
       <div><Link to='/mocktails'><div className="carouselTopImage"><img src="./img/mocktail.png" alt="drink" /></div><h5 className="carouselLinks">Mocktails</h5></Link></div>
-
-  {/* <div> <img src="./img/classics.png" alt="drink" /></div>
-  <div> <img src= "./img/shot.png"alt="drink"/></div>
-      <div> <img src="./img/longdrinks.png" alt="drink" /></div>
-      <div> <img src="./img/creamy.png" alt="drink" /></div>
-      <div> <img src="./img/punch.png" alt="drink" /></div>
-      <div> <img src="./img/mocktail.png" alt="drink"/></div> */}
 </Carousel>
   );
 };

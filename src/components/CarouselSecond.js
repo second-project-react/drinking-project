@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel";
 import axios from 'axios'
 import { React, useEffect, useRef, useState } from "react";
 import CarouselSecondCard from "./CarouselSecondCard";
+import './CarouselSecond.css';
 
 
 const responsive = {
@@ -13,7 +14,7 @@ const responsive = {
       min: 1024,
     },
 
-    items: 5,
+    items: 4,
     slidesToSlide: 1,
     partialVisibilityGutter: 0,
   },
@@ -60,30 +61,11 @@ const CarouselSecond = ({ deviceType }) => {
       });
   }, []);
 
-// const array = [
-//   "./img/latest-butterfly.png",
-//   "./img/latest-mountain-bramble.png",
-//   "./img/latest-pink-moon.png",
-//   "./img/latest-apple-highball.png",
-//   "./img/latest-frose.png",
-//   "./img/latest-galah.png",
-//   "./img/latest-snowday.png",
-//   "./img/lastest-winter-paloma.png",
-//   "./img/latest-winter-rita.png",
-//   "./img/latest-elderflower.png",
-//    ];
-   
- 
-   // const clickHandler = (itemID) => {
-   //    console.log(itemID)
-   //    setCardID(itemID)
-   //    setModalShow(true)
-   // }
-   
-  // console.log(latest)
    return (
-    
-<Carousel
+  <div >
+ <h4 className="featured">Featured Drinks</h4>
+  
+<Carousel className="carousel"
   swipeable={true}
   draggable={true}
   showDots={true}
@@ -104,11 +86,15 @@ const CarouselSecond = ({ deviceType }) => {
        }}
        
      >
+       
        {latest.map((item, index) => (
-              <div>
-               <CarouselSecondCard displayItem={item} displayIndex={index}/></div>
+              <div >
+                
+               <CarouselSecondCard displayItem={item} displayIndex={index}/>
+               </div>
             ))}
         </Carousel>
+        </div>
   
 )
 }
