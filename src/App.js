@@ -32,6 +32,7 @@ import Latest from './components/pages/Latest';
 
 
 
+
 import Ingredient from './components/Ingredient';
 
 
@@ -53,7 +54,8 @@ function App() {
             <Route path='/classics' exact component={ClassicsList} />
             <Route path='/punch' exact component={PunchList} />
             {/* Multi-ingridients */}
-            <Route path='/multi-ingredients' exact component={Ingredient} />
+          <Route path='/multi-ingredients' exact component={Ingredient} />
+        
             {/* Spirits */}
             <Route path='/bourbon' exact component={Bourbon} />
             <Route path='/brandy' exact component={Brandy} />

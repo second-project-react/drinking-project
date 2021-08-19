@@ -41,12 +41,13 @@ function ModalDisplay(props) {
     .map((item) => item);
 
   const finalArrayOfMeasure = arrayOfMeasure
-    .filter((item) => item !== null && item !== "" && item !== undefined)
+    .filter((item) => item !== null && item !== "" && item !== undefined )
     .map((item) => item);
 
   const twoInOne = (item, index) =>
     allLiOfIngridientsAndMeasure.push(
-      `${finalArrayOfMeasure[index]} - ${item}`
+       `${finalArrayOfMeasure[index] ? finalArrayOfMeasure[index] : 'as desired'} - ${item}`
+
     );
 
   finalArrayOfIngredients.forEach(twoInOne);
@@ -98,7 +99,7 @@ function ModalDisplay(props) {
                         src={`https://www.thecocktaildb.com/images/ingredients/${
                           item.split("- ")[1]
                         }-medium.png`}
-                        alt="gin"
+                        alt="ingredient"
                       />
                       {/* <img
                         class="ingredientImageHover"
