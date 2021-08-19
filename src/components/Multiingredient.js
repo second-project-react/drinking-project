@@ -14,7 +14,7 @@ const MultiIngredient = () => {
 
 
    useEffect(() => {
-      Axios.get('https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/list.php?i=list')
+      Axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/list.php?i=list`)
          .then((response) => {
             console.log(response.data.drinks)
             const ingredientList = response.data.drinks.map((item) => {
