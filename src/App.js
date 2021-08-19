@@ -45,7 +45,8 @@ function App() {
     <Router>
       <div className='App'>
           <Sidebar />
-          <Switch>          
+          <Switch>   
+                   
             <Route path='/' exact component={Home} />
             {/* Categories */}
             <Route path='/shots' exact component={ShotsList} />
