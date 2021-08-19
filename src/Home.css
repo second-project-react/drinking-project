@@ -1,4 +1,4 @@
-/* .home {
+.home {
    display: flex;
   
 }
@@ -8,35 +8,13 @@
    width:100%;
    /* background: linear-gradient(90deg, #F8C23A 6.04%, #FDBD84 22.45%, #FF9BA1 39.39%, #FDBD81 57.15%, #F8C23A 69.86%);
 
-/* .bottomPart{
-   height:50%;
-   width:100%;
-   background-color:#ffffff;
-   margin:auto;
-   text-align:center;
-   color:black;
-} */
-.latestRow {
-   margin-top: 75px;
-   
-   /* display: flex;
-   flex-direction: row;
-   margin-left: 30px; */
-}
 
-.secondRow {
-   display: flex;
-   flex-direction: row;
-   
-   
-   
-}
+   opacity: 0.65; */
 
-/* opacity: 0.65; */ */
-.topPart{ 
    background: linear-gradient(30.11deg, #FFFFFF -11.43%, #FFEE93 13.8%, #F0D7BF 47.62%, #95D1EB 86.69%);
    opacity: 0.85;
    margin:auto;
+   margin-top: 50px;
    text-align:center;
    padding-top: 70px;
 }
