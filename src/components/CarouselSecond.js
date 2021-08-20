@@ -64,7 +64,7 @@ const CarouselSecond = ({ deviceType }) => {
       .get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/latest.php`)
       .then((response) => response.data)
       .then((data) => {
-        //console.log(data.data.drinks);
+
         setLatest(data.drinks);
       }).catch((error) => {
         console.log(error);

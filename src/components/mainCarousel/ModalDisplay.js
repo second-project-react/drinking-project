@@ -15,8 +15,6 @@ function ModalDisplay(props) {
 
 
   useEffect(() => {
-    // setCocktailID(props.cocktailid);
-    // console.log(cocktailId)
     Axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/lookup.php?i=${props.cocktailid}`)
         .then((response) => response.data)
        .then((data)=>{

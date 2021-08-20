@@ -73,7 +73,7 @@ const Sidebar = () => {
         <IconContext.Provider value={{ color: '#ADD8E6'}}>
             <Nav>
                 
-                <NavIcon to='#'>
+                <NavIcon>
                     <FaIcons.FaBars onClick={ShowSidebar}/>
                     </NavIcon> 
                     <Link to='/'><p className="pageName">THE COCKTAIL BAR</p></Link>
@@ -86,7 +86,7 @@ const Sidebar = () => {
             </Nav>
             <SidebarNav sidebar={sidebar}>
                 <SidebarWrap>
-                <NavIcon to='#'>
+                <NavIcon>
                     <AiIcons.AiOutlineClose onClick={ShowSidebar}/>
                 </NavIcon>
                 {SidebarData.map((item, index) => {
