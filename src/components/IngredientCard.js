@@ -7,10 +7,7 @@ function IngredientCard({ cocktailList }) {
   // const[idValue,setIDValue]= useState('');
   const clickHandler = (id) => {
     setCardValue(true)
-    // setIDValue(id)
-    // console.log(idValue)
-    console.log(cocktailList.idDrink)
-  }
+    }
 
    return (
      <div>

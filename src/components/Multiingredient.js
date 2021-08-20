@@ -16,7 +16,6 @@ const MultiIngredient = () => {
    useEffect(() => {
       Axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/list.php?i=list`)
          .then((response) => {
-            console.log(response.data.drinks)
             const ingredientList = response.data.drinks.map((item) => {
             return {...item, selected:false}
             })
@@ -38,11 +37,9 @@ const MultiIngredient = () => {
             ingString = ingString + selectIngredient[i].strIngredient1
          }
       }
-      // console.log('https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?i='+ingString)
 
       Axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?i=${ingString}`)
       .then((response)=>{
-         console.log(response.data.drinks)
          setDisplayItems([...response.data.drinks]);
          setIsLoading(false);
       })
@@ -67,7 +64,6 @@ const MultiIngredient = () => {
    
 
    const deleteIngredient = (index,name) => {
-      console.log(name)
       selectIngredient.splice(index, 1);
       setSelectIngredient([...selectIngredient]);
       const ingredientList = ingredients.map((item) => {
@@ -78,8 +74,6 @@ const MultiIngredient = () => {
          return { ...item }
          })
       setIngredients([...ingredientList])
-      
-      console.log("ing",ingredients)
    }
 
    

@@ -16,7 +16,7 @@ function Card1(){
            console.log(error)
          })
      }, [])
-     console.log(value)
+
      const arrayOfIngredients=[]; 
      for(let i=1; i<=15; i++){
         arrayOfIngredients.push(value['strIngredient'+i])
@@ -41,7 +41,7 @@ function Card1(){
     const twoInOne = ((item, index) => allLiOfIngridientsAndMeasure.push(`${finalArrayOfMeasure[index]} - ${item} `))
     
     finalArrayOfIngredients.forEach(twoInOne);
-    console.log(value.strGlass)
+
      return(
          <div className="Card1">
            <h2 className="card1_drinkName">{value.strDrink}</h2>

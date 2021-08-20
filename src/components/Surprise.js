@@ -27,13 +27,11 @@ const Surprise = () => {
    const [timer, setTimer] = React.useState(0);
 
   React.useEffect(() => {
-    console.log("timer started!");
     const interval = setInterval(() => {
       setTimer((prevState) => prevState + 1);
     }, 10);
     return () => {
       clearInterval(interval);
-      console.log("timer stopped");
     };
   }, []);
 
