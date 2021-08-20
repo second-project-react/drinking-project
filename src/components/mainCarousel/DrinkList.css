@@ -25,11 +25,6 @@
      */  
 }
 @media screen and (min-width: 768px) and (max-width: 1399px){
-    .listOfDrinks {
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 5px;
-        justify-content: space-around;
         font-family: 'Lato', sans-serif;
         margin: 30px 50px 50px 30px;
     }
