@@ -142,7 +142,6 @@ margin: 0;
   opacity: 0;
 }
 #straw {
-    display: none;
     position: absolute;
     bottom:20px; right:30%;
     height:110px; width:6px;
@@ -152,6 +151,7 @@ margin: 0;
     transform-origin: left bottom;
     -webkit-transform: rotate(-18.5deg);
     -webkit-transform-origin: left bottom;
+    opacity: 0;
 }
 #straw:after {
     content: '';

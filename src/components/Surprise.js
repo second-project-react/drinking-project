@@ -8,13 +8,15 @@ import IngredientCard from './IngredientCard';
 const Surprise = () => {
    
    const [random, setRandom] = useState({})
-   const [hideLoader, setHideLoader] = useState(false)
+   const [modalShow, setModalShow] = useState(false);
+   const [timer, setTimer] = React.useState(0);
 
    const getRandom = () => {
       Axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/random.php`)
       .then((response)=>{
          setRandom(response.data.drinks[0])
-         setHideLoader(true)
+         setModalShow(true)
+         setTimer(0)
          return response.data.drinks[0]
       })
       .catch((error)=>{
@@ -25,39 +27,29 @@ const Surprise = () => {
 
 
    // Animation Code
-
-
-   const [timer, setTimer] = React.useState(0);
-
   const loaderAnimate = () => {
-    console.log("timer started!");
-     const interval = setInterval(() => {
-        setTimer((prevState) => {
-           if (prevState > 100) {
-              return 101;
-           } else {
-            return prevState + 0.3;
-            }
-        });
-    }, 10);
-     if (timer === 101) {
-        clearInterval(interval);
-        setTimer(0)
-     }
+      console.log("timer started!");
+      const interval = setInterval(() => {
+         setTimer((prevState) => {
+            if (prevState > 101) {
+               clearInterval(interval);
+               console.log("timer stopped");
+               return 101;
+            } else {
+             return prevState + 0.3;
+             }
+         });
+     }, 10);
   };
 
    
    useEffect(() => {
       if (timer === 101) {
          getRandom()
-         
       }
+
    }, [timer])
 
-
-   const SupriseContent = (item) => {
-      console.log(random);
-   }
 
 
    return(
@@ -74,9 +66,16 @@ const Surprise = () => {
          <div  className="surpriseDesc">
             <h3>{random?.strDrink}</h3>
          </div> */}
-         {hideLoader ?
-            <IngredientCard cocktailList={random} />
-            :
+        
+           
+                <ModalDisplay
+                cocktailid={random.idDrink}
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+              
+                
+              />
+          
             <div className="surpriseTitle">
                <h1>Dont know what to Drink tonight?</h1>
                <div className="subtitle">
@@ -84,11 +83,11 @@ const Surprise = () => {
                   <div class="spinner" style={timer === 0 ? { display: 'none' } : { display: 'block' }}></div>
                </div>
             </div>
-         }
-         <div className="cocktailLoader" onClick={loaderAnimate}>
+         
+         <div className="cocktailLoader" onClick={()=>loaderAnimate()}>
          <div id="loader">
-            <div id="lemon" style={timer >=100 ? {opacity: 1} : {opacity: 0} }></div>
-            <div id="straw"></div>
+            <div id="lemon" style={timer >=90 ? {opacity: 1} : {opacity: 0} }></div>
+            <div id="straw" style={timer >=80 ? {opacity: 1} : {opacity: 0} }></div>
             <div id="glass">
                <div id="cubes">
                      <div></div>
@@ -99,7 +98,8 @@ const Surprise = () => {
                <span id="counter"></span>
             </div>
             <div id="coaster"></div>
-         </div>
+            </div>
+            <h3>Click Me</h3>
          </div>
       </div>
    );

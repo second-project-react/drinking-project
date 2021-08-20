@@ -24,7 +24,7 @@ import Vodka from './components/pages/spirits/Vodka'
 // // Lists of drinks
 import Popular from './components/pages/Popular';
 import Latest from './components/pages/Latest';
-
+import Favorites from './components/pages/Favorites';
 
 
 
@@ -72,7 +72,7 @@ function App() {
             <Route path='/latest' exact component={Latest} />
             {/* Surprise me */}
             <Route path='/surprise' exact component={Popular} />
-
+            <Route path='/favorites' exact component={Favorites} />
 
           </Switch>
 

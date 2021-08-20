@@ -54,8 +54,8 @@ export const SidebarData = [
         icon: <GiIcons.GiCutLemon />,
     },
     {
-        title: 'Search',
-        path: '/search',
+        title: 'Favorites',
+        path: '/favorites',
         icon: <GiIcons.GiCutLemon />,
     },
     {
