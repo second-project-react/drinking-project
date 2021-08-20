@@ -12,21 +12,35 @@
     font-size: 5px;
     justify-content: space-around;
     font-family: 'Lato', sans-serif;
-    margin-top: 2px;
-
+    margin: 50px 100px 50px 100px;
 }
 .mainDiv {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    margin-top: 50px;
+    background-color: #fefefa;
+    /* background-color: #f5f5dc;
+     */  
 }
+@media screen and (min-width: 768px) and (max-width: 1399px){
+    .listOfDrinks {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 5px;
+        justify-content: space-around;
+        font-family: 'Lato', sans-serif;
+        margin: 30px 50px 50px 30px;
+    }
+}
+
+
 
 .drinkType {
     font-family: 'Lato', sans-serif;
     font-size: 50px;
     margin-top: 30px;
-    margin-bottom: 30px;
 }
 
 .qoute {
@@ -35,7 +49,4 @@
     font-weight: 400;
 }
 
-.drinkLine {
-    margin-top: 100px;
-}
 

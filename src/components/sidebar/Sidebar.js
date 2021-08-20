@@ -76,10 +76,12 @@ const Sidebar = () => {
                 <NavIcon to='#'>
                     <FaIcons.FaBars onClick={ShowSidebar}/>
                     </NavIcon> 
-                    <p className="pageName">THE COCKTAIL BAR</p>
+                    <Link to='/'><p className="pageName">THE COCKTAIL BAR</p></Link>
+                    <Link to='/'>
                     <div className="logoDiv">
                     <img className="logo" src="./img/logo.png"  alt="drink" />  
                     </div>
+                    </Link>
                      
             </Nav>
             <SidebarNav sidebar={sidebar}>

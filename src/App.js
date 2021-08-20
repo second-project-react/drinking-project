@@ -2,6 +2,7 @@ import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import Sidebar from './components/sidebar/Sidebar';
+import Footer from "./Footer";
 
 // Pages
 // // MainPage
@@ -16,7 +17,6 @@ import ClassicsList from './components/mainCarousel/ClassicsList'
 import Bourbon from './components/pages/spirits/Bourbon'
 import Brandy from './components/pages/spirits/Brandy'
 import Gin from './components/pages/spirits/Gin'
-import Liqueur from './components/pages/spirits/Liqueur'
 import Rum from './components/pages/spirits/Rum'
 import Scotch from './components/pages/spirits/Scotch'
 import Tequila from './components/pages/spirits/Tequila'
@@ -61,7 +61,6 @@ function App() {
             <Route path='/bourbon' exact component={Bourbon} />
             <Route path='/brandy' exact component={Brandy} />
             <Route path='/gin' exact component={Gin} />
-            <Route path='/liqueur' exact component={Liqueur} />
             <Route path='/rum' exact component={Rum} />
             <Route path='/scotch' exact component={Scotch} />
             <Route path='/tequila' exact component={Tequila} />
@@ -75,7 +74,7 @@ function App() {
             <Route path='/favorites' exact component={Favorites} />
 
           </Switch>
-
+          <Footer/>
        </div>
    </Router>
   )
