@@ -8,7 +8,7 @@ function ModalDisplay(props) {
   const [isLoading, setIsLoading] = useState(true);
 
   const [cocktailId, setCocktailID] = useState(props.cocktailid);
-  const[favoriteButton,setFavoriteButton]=useState(false)
+  const[favoriteButton,setFavoriteButton]=useState(0)
   const arrayOfIngredients = [];
   let allLiOfIngridientsAndMeasure = [];
   const arrayOfMeasure = [];
@@ -26,6 +26,56 @@ function ModalDisplay(props) {
       });
   }, [cocktailId, props.cocktailid]);
 
+  useEffect(() => {
+    if (props.show) {
+      let initialList = JSON.parse(localStorage.getItem("favorites") || "[]");
+      console.log((initialList.findIndex((e) => e.idDrink === value.idDrink)) !== -1);
+      if ((initialList.findIndex((e)=>e.idDrink===value.idDrink))!==-1) {
+        setFavoriteButton(1)
+      }
+    }
+
+ },[props.show])
+  useEffect(() => {
+    let favList = [];
+   
+    favList = JSON.parse(localStorage.getItem("favorites") || "[]")
+    if (favoriteButton === 1) {
+      if ((favList.findIndex((e) => e.idDrink === value.idDrink)) === -1){
+        favList.push(value);
+        localStorage.setItem('favorites', JSON.stringify(favList)); 
+      }
+      
+      
+    } else if(favoriteButton===2) {
+      let deleteIndex = favList.findIndex((e)=>e.idDrink===value.idDrink)
+      console.log(deleteIndex)
+      favList.splice(deleteIndex,1);
+       localStorage.setItem('favorites', JSON.stringify(favList)); 
+    }
+  }, [favoriteButton])
+  
+  const favBtn = () => {
+    if (favoriteButton === 0)  {
+      setFavoriteButton(1);
+    } else if (favoriteButton === 1) {
+      setFavoriteButton(2);
+    }
+    else if (favoriteButton === 2)
+    {setFavoriteButton(1);
+       }
+  }
+  
+    
+    // if (localStorage.getItem('favorites')) {
+    //   favList = localStorage.getItem('favorites');
+    // }
+    // favList.push(value.idDrink);
+  
+  
+ 
+  
+
   for (let i = 1; i <= 15; i++) {
     arrayOfIngredients.push(value["strIngredient" + i]);
   }
@@ -39,15 +89,18 @@ function ModalDisplay(props) {
     .map((item) => item);
 
   const finalArrayOfMeasure = arrayOfMeasure
-    .filter((item) => item !== null && item !== "" && item !== undefined)
+    .filter((item) => item !== null && item !== "" && item !== undefined )
     .map((item) => item);
 
   const twoInOne = (item, index) =>
     allLiOfIngridientsAndMeasure.push(
-      `${finalArrayOfMeasure[index]} - ${item}`
+       `${finalArrayOfMeasure[index] ? finalArrayOfMeasure[index] : 'as desired'} - ${item}`
+
     );
 
   finalArrayOfIngredients.forEach(twoInOne);
+
+  
 
   return (
     <Modal
@@ -94,7 +147,7 @@ function ModalDisplay(props) {
                         src={`https://www.thecocktaildb.com/images/ingredients/${
                           item.split("- ")[1]
                         }-medium.png`}
-                        alt="gin"
+                        alt="ingredient"
                       />
                       {/* <img
                         class="ingredientImageHover"
@@ -113,7 +166,7 @@ function ModalDisplay(props) {
               <p className="drinkInstructions">{value.strInstructions}</p>
             </div>
 
-              <div className={favoriteButton ? 'active favBtn' : 'favBtn' }  id="btn" onClick={ ()=>setFavoriteButton(!favoriteButton)}>
+              <div className={favoriteButton===1 ? 'active favBtn' : 'favBtn' }  id="btn" onClick={ ()=> favBtn () }>
               <div className="heart"></div>
               <h3>Favorite this!</h3>
             </div>

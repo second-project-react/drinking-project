@@ -29,8 +29,8 @@ const Home = (props) => {
 
          <div className="secondRow">
            <div>
-              <img src="./img/latest-butterfly.png" alt=""/>
-               {/* <Surprise /> */}
+              {/* <img src="./img/latest-butterfly.png" alt=""/> */}
+               <Surprise />
            </div>
             
             

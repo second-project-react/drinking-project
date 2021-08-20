@@ -137,15 +137,16 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.38);
    background-image: url("/src/cssImages/heart3.png");
    background-position: 0 0;
    cursor: pointer;
+
  
  }
  
  .active {
-     border-color: pink;
+     border-color: red;
  }
  
  .active h3 {
-     color: pink;
+     color: red;
  }
  
  .active .heart {
