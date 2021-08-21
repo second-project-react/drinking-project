@@ -23,8 +23,8 @@ export default function MocktailsList() {
     return (
         <div className='mainDiv'>
             <h2 className='drinkType'>Mocktails</h2>
-            <hr size="8" width="40%" color="gray"></hr> 
-            <h5 className='qoute'>"Lorem ipsum"</h5>
+            {/* <hr size="8" width="40%" color="gray"></hr>  */}
+            <h5 className='qoute'>“Live for today, plan for tomorrow, party tonight, party tonight.”</h5>
             <div className='listOfDrinks'>
                 {shots.map((drink, index) => (
                     <DrinkCard 

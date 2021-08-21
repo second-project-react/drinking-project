@@ -76,7 +76,7 @@ const Sidebar = () => {
                 <NavIcon>
                     <FaIcons.FaBars onClick={ShowSidebar}/>
                     </NavIcon> 
-                    <Link to='/'><p className="pageName">THE COCKTAIL BAR</p></Link>
+                    <Link to='/'><p className="pageName">The CockTail Bar</p></Link>
                     <Link to='/'>
                     <div className="logoDiv">
                     <img className="logo" src="./img/logo.png"  alt="drink" />  

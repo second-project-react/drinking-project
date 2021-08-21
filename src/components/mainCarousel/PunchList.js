@@ -23,8 +23,8 @@ export default function PunchList() {
     return (
         <div className='mainDiv'>
             <h2 className='drinkType'>Punch</h2>
-            <hr size="8" width="40%" color="gray"></hr> 
-            <h5 className='qoute'>"I said this, but didn't think"</h5>
+            {/* <hr size="8" width="40%" color="gray"></hr>  */}
+            <h5 className='qoute'>"Work hard, Party harder!!!"</h5>
             <div className='listOfDrinks'>
                 {shots.map((drink, index) => (
                     <DrinkCard 

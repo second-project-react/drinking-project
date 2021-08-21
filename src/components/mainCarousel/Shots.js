@@ -22,9 +22,9 @@ export default function ShotsList() {
     
     return (
         <div className='mainDiv'>
-            <h2 className='drinkType'>SHOTS</h2>
-            <hr size="8" width="40%" color="gray"></hr> 
-            <h5 className='qoute'>"I said no to alcohol but it just does not listen"</h5>
+            <h2 className='drinkType'>Shots</h2>
+            {/* <hr size="8" width="40%" color="gray"></hr>  */}
+            <h5 className='qoute'>"When life gives you lemons, bust out the Tequila and the salt ;) "</h5>
             <div className='listOfDrinks'>
                 {shots.map((drink, index) => (
                     <DrinkCard 

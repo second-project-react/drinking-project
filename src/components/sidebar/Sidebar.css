@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Kaushan+Script&family=Meddon&family=Mr+Dafoe&family=Mr+De+Haviland&family=Sacramento&display=swap');
+
 
 .logo{
   width: 70px;
@@ -14,12 +16,15 @@
     font-size: 45px;
     white-space: nowrap;
     font-family: 'Poppins', sans-serif;
+    /* font-family:  'Allison', cursive;; */
     font-weight: 700;
-    background-color: #95D1EB;
+    text-transform: uppercase;
+    background-color: #3AB795;
+    /* background-color: #95D1EB;
   
   background-image: linear-gradient(
 30.11deg
-, #FFFFFF -11.43%, #e2d16f 13.8%, #F0D7BF 47.62%, #95D1EB 86.69%);
+, #FFFFFF -11.43%, #e2d16f 13.8%, #F0D7BF 47.62%, #95D1EB 86.69%); */
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
