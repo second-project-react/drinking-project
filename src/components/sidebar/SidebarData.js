@@ -119,7 +119,7 @@ export const SidebarData = [
     },
     {
         title: 'Surprise',
-        path: '/surprise',
+        path: '/',
         icon: <AiIcons.AiOutlineGift />,
     }
 ]
