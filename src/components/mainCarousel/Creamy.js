@@ -23,7 +23,7 @@ export default function CreamyList() {
     return (
         <div className='mainDiv'>
             <h2 className='drinkType'>Creamy Drinks</h2>
-            {/* <hr size="8" width="40%" color="gray"></hr>  */}
+            {/* <hr size="8" width="40%" color  ="gray"></hr>  */}
             <h5 className='qoute'>"Alcohol may be man’s worst enemy, but the bible says love your enemy ;)"</h5>
             <div className='listOfDrinks'>
                 {shots.map((drink, index) => (

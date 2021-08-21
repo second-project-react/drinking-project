@@ -46,7 +46,7 @@
     margin: 0 75px 50px 75px;
 }
 /* for larger screens */
-@media screen and (min-width: 3000px){
+@media screen and (min-width: 2000px){
     .listOfDrinks{
         margin: 0 150px 50px 150px;
     }

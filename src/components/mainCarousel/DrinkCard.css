@@ -39,19 +39,19 @@
     margin: 10px 0 40px 0;
 }
 /* for larger screens */
-@media screen and (min-width: 3000px){
+@media screen and (min-width: 2000px){
     .img{
-        width: 250px;
+        width: 220px;
         height: auto;
         margin: 50px;
     }
     .drinkName{
-        font-size: 35px;
+        font-size: 30px;
     }
     
 }
 /* for laptops and dektops */
-@media screen and (max-width: 1605px){
+@media screen and (max-width: 1800px){
     
 }
 @media screen and (max-width: 1366px){
