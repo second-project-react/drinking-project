@@ -49,7 +49,7 @@ const SidebarNav = styled.nav`
     top: 0;
     left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
     transition: 350ms;
-    z-index: 10;
+    z-index: 12;
     opacity: 0.9;
 
 `;
@@ -60,6 +60,15 @@ const SidebarWrap = styled.div`
 // const pageName = styled.h1`
 //   color: blue;
 // `;
+const PageWrapper = styled.div`
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index:11;
+    background-color: black;
+    opacity:0.4;
+    top: 0;
+`;
 
 const Sidebar = () => {
     const [sidebar, setSidebar] = useState(false)
@@ -76,7 +85,7 @@ const Sidebar = () => {
                 <NavIcon>
                     <FaIcons.FaBars onClick={ShowSidebar}/>
                     </NavIcon> 
-                    <Link to='/'><p className="pageName">THE COCKTAIL BAR</p></Link>
+                    <Link to='/'><p className="pageName">The CockTail Bar</p></Link>
                     <Link to='/'>
                     <div className="logoDiv">
                     <img className="logo" src="./img/logo.png"  alt="drink" />  
@@ -95,7 +104,8 @@ const Sidebar = () => {
                     )
                 })}
                 </SidebarWrap>
-            </SidebarNav>
+                </SidebarNav>
+                {sidebar && <PageWrapper onClick={ShowSidebar}></PageWrapper>}
         </IconContext.Provider>    
         </>
     )

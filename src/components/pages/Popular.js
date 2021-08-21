@@ -19,9 +19,9 @@ const Popular = () => {
         }, [])
     return (
         <div className='mainDiv'>
-            <h2 className='drinkType'>Popular</h2>
-            <hr size="8" width="40%" color="gray"></hr> 
-            <h5 className='qoute'>"I said no to alcohol but it just does not listen"</h5>
+            <h2 className='drinkType'>Popular Cocktails</h2>
+            {/* <hr size="8" width="40%" color="gray"></hr>  */}
+            <h5 className='qoute'>"Hear no evil, speak no evil, and you won't be invited to cocktail parties"</h5>
             <div className='listOfDrinks'>
                 {drinks.map((drink, index) => (
                     <DrinkCard 

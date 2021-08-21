@@ -20,8 +20,8 @@ const Latest = () => {
     return (
         <div className='mainDiv'>
             <h2 className='drinkType'>Latest</h2>
-            <hr size="8" width="40%" color="gray"></hr> 
-            <h5 className='qoute'>"I said no to alcohol but it just does not listen"</h5>
+            {/* <hr size="8" width="40%" color="gray"></hr>  */}
+            <h5 className='qoute'>"I'm coming up so you better get this party started"</h5>
             <div className='listOfDrinks'>
                 {drinks.map((drink, index) => (
                     <DrinkCard 

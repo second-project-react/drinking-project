@@ -22,9 +22,9 @@ export default function ClassicsList() {
 
     return (
         <div className='mainDiv'>
-            <h2 className='drinkType'>Classic</h2>
-            <hr size="8" width="40%" color="gray"></hr> 
-            <h5 className='qoute'>"Somebody something said"</h5>
+            <h2 className='drinkType'>Classics</h2>
+            {/* <hr size="8" width="40%" color="gray"></hr>  */}
+            <h5 className='qoute'>"Time to drink Champagne and Dance on the table"</h5>
             <div className='listOfDrinks'>
                 {drinks.map((drink, index) => (
                     <DrinkCard 

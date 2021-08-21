@@ -99,7 +99,7 @@ const Surprise = () => {
             </div>
             <div id="coaster"></div>
             </div>
-            <h3>Click Me</h3>
+           
          </div>
       </div>
    );

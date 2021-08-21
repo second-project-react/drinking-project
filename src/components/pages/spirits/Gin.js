@@ -20,8 +20,8 @@ const Gin = () => {
     return (
         <div className='mainDiv'>
             <h2 className='drinkType'>Gin</h2>
-            <hr size="8" width="40%" color="gray"></hr> 
-            <h5 className='qoute'>"I said no to alcohol but it just does not listen"</h5>
+            {/* <hr size="8" width="40%" color="gray"></hr>  */}
+            <h5 className='qoute'>"Life may not be the party that we hoped for, but while we are here we should drink and dance!"</h5>
             <div className='listOfDrinks'>
                 {drinks.map((drink, index) => (
                     <DrinkCard 

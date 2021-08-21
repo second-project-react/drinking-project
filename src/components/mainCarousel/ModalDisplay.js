@@ -142,7 +142,7 @@ function ModalDisplay(props) {
                 <h3 className="sectionName1">INGREDIENTS</h3>
                 <ul className="drinkIngredients">
                   {allLiOfIngridientsAndMeasure.map((item) => (
-                    <li>
+                    <li className="ingredientName">
                       {" "}
                       {item}{" "}
                       <img

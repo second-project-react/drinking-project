@@ -17,9 +17,9 @@ const Favorites = () => {
    }
    return (
       <div className='mainDiv'>
-          <h2 className='drinkType'>Latest</h2>
-          <hr size="8" width="40%" color="gray"></hr> 
-         <h5 className='qoute'>"I said no to alcohol but it just does not listen"</h5>
+          <h2 className='drinkType'>Favorites</h2>
+          {/* <hr size="8" width="40%" color="gray"></hr>  */}
+         <h5 className='qoute'>"Life is short, wear your party pants and get drunk ;)"</h5>
          <button onClick={clearAll}> Clear All </button>
           <div className='listOfDrinks'>
               {favItems.map((drink, index) => (
