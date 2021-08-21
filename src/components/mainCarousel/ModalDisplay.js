@@ -7,11 +7,15 @@ function ModalDisplay(props) {
   const [value, setValue] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
+
   const [cocktailId, setCocktailID] = useState(props.cocktailid);
   const[favoriteButton,setFavoriteButton]=useState(0)
   const arrayOfIngredients = [];
   let allLiOfIngridientsAndMeasure = [];
   const arrayOfMeasure = [];
+  const [instrLanguageHandler, setInstrLanguageHandler] = useState(value.strInstructions)
+
+  
 
 
   useEffect(() => {
@@ -25,11 +29,10 @@ function ModalDisplay(props) {
         console.log(error);
       });
   }, [cocktailId, props.cocktailid]);
-
+  
   useEffect(() => {
     if (props.show) {
       let initialList = JSON.parse(localStorage.getItem("favorites") || "[]");
-      console.log((initialList.findIndex((e) => e.idDrink === value.idDrink)) !== -1);
       if ((initialList.findIndex((e)=>e.idDrink===value.idDrink))!==-1) {
         setFavoriteButton(1)
       }
@@ -139,7 +142,7 @@ function ModalDisplay(props) {
                 <h3 className="sectionName1">INGREDIENTS</h3>
                 <ul className="drinkIngredients">
                   {allLiOfIngridientsAndMeasure.map((item) => (
-                    <li>
+                    <li className="ingredientName">
                       {" "}
                       {item}{" "}
                       <img
@@ -163,7 +166,14 @@ function ModalDisplay(props) {
             </div>
             <div className="container2">
               <h3 className="sectionName2">INSTRUCTIONS</h3>
-              <p className="drinkInstructions">{value.strInstructions}</p>
+              <div className="flags">
+                {value.strInstructionsDE ? <img className="flag" src="/img/flagGERicon.png" alt="ger" onClick={(e) => setInstrLanguageHandler(value.strInstructionsDE)}/> : null}
+                {value.strInstructionsIT ? <img className="flag" src="/img/flagITAicon.png" alt="it" onClick={(e) => setInstrLanguageHandler(value.strInstructionsIT)}/> : null}
+                {value.strInstructions ? <img className="flag" src="/img/flagUKicon.png" alt="uk" onClick={(e) => setInstrLanguageHandler(value.strInstructions)}/> : null}
+                {value.strInstructionsFR ? <img className="flag" src="/img/flagFRAicon.png" alt="fr" onClick={(e) => setInstrLanguageHandler(value.strInstructionsFR)}/> : null}
+                {value.strInstructionsES ? <img className="flag" src="/img/flagSPAicon.png" alt="es" onClick={(e) => setInstrLanguageHandler(value.strInstructionsES)}/> : null}
+              </div>
+              <p className="drinkInstructions">{instrLanguageHandler || value.strInstructions}</p>
             </div>
 
               <div className={favoriteButton===1 ? 'active favBtn' : 'favBtn' }  id="btn" onClick={ ()=> favBtn () }>

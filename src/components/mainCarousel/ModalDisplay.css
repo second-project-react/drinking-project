@@ -51,17 +51,32 @@ width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     font-size: 20px;
     font-weight: 900;
     font-family: 'Lato', sans-serif;
-}.drinkInstructions{
-    margin:0px 40px;
-}
-.container2{
-    margin-top: 25px;
 }
 
+.container2{
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.flags {
+    margin-bottom: 3px;
+}
+.flag {
+    margin: 3px;
+    height: 3.5vh;
+}
+.inactive {
+    filter: grayscale(100%);
+}
+.drinkInstructions{
+    margin:0px 40px;
+}
 
 
 .ingredientImage{
@@ -106,6 +121,12 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.38);
     font-style: italic;
 
 }
+.ingredientName{
+    font-size:16px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
 
 /* Favorite Button */
 .favBtn{
@@ -140,7 +161,7 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.38);
 
  
  }
- 
+
  .active {
      border-color: red;
  }
@@ -162,16 +183,37 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.38);
    }
  }
 /* End of button */
-@media screen and  (max-width: 768px) {
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
 
     .container1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .container1B {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .ingredientName{
+        font-size:20px;
+    
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
     }
+   
 }
+
+@media only screen 
+  and (max-device-width: 767px) {
+
+    .container1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ingredientName{
+        font-size:16px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    }
+    
+}
+  
