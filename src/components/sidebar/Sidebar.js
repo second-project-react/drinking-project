@@ -82,7 +82,6 @@ const Sidebar = () => {
                     <img className="logo" src="./img/logo.png"  alt="drink" />  
                     </div>
                     </Link>
-                    
                      
             </Nav>
             <SidebarNav sidebar={sidebar}>

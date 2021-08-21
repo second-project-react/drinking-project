@@ -5,7 +5,6 @@ import * as GiIcons from 'react-icons/gi'
 import * as BiIcons from 'react-icons/bi'
 import * as FaIcons from 'react-icons/fa'
 
-
 export const SidebarData = [
     {
         title: 'Home',
@@ -56,7 +55,7 @@ export const SidebarData = [
     {
         title: 'Favorites',
         path: '/favorites',
-        icon: <GiIcons.GiCutLemon />,
+        icon: <AiIcons.AiFillHeart />,
     },
     {
         title: 'Spirits',
@@ -79,11 +78,6 @@ export const SidebarData = [
                 title: 'Gin',
                 path: '/gin',
                 icon: <GiIcons.GiGlassShot />
-            },
-            {
-                title: 'Liqueur',
-                path: '/liqueur',
-                icon: <GiIcons.GiGlassShot/>
             },
             {
                 title: 'Rum',

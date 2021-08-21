@@ -8,13 +8,23 @@ import './CarouselSecond.css';
 
 
 const responsive = {
+  // superLargeDesktop: {
+  //   breakpoint: { 
+  //     max: 4000, 
+  //     min: 3001
+  //    },
+  //   items: 5,
+  //   slidesToSlide: 1,
+  //   partialVisibilityGutter: 0,
+  // },
+
   desktop: {
     breakpoint: {
       max: 3000,
       min: 1024,
     },
 
-    items: 4,
+    items: 5,
     slidesToSlide: 1,
     partialVisibilityGutter: 0,
   },

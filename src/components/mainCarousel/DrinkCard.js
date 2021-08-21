@@ -23,7 +23,7 @@ function DrinkCard (props){
   const [modalShow, setModalShow] = React.useState(false);
   
   return (
-    <div>
+    <div className='drinkCard'>
     <img src={props.drinkImage} alt="props.shotsName" className='img' onClick={() => setModalShow(true)  }/>
       <h5 className='drinkName'>{props.drinkName}</h5>
       <ModalDisplay
