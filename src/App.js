@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import Home from './Home';
 // // Categories
 import ShotsList from './components/mainCarousel/Shots'
+import LongDrinksList from './components/mainCarousel/LongDrinksList'
 import MocktailsList from './components/mainCarousel/Mocktails'
 import CreamyList from './components/mainCarousel/Creamy'
 import PunchList from './components/mainCarousel/PunchList';
@@ -50,6 +51,7 @@ function App() {
             <Route path='/' exact component={Home} />
             {/* Categories */}
             <Route path='/shots' exact component={ShotsList} />
+            <Route path='/longdrinks' exact component={LongDrinksList} />
             <Route path='/mocktails' exact component={MocktailsList} />
             <Route path='/creamy' exact component={CreamyList} />
             <Route path='/classics' exact component={ClassicsList} />

@@ -2,7 +2,7 @@
 import Carousel from "react-multi-carousel";
 
 import axios from 'axios'
-import { React, useEffect, useRef, useState } from "react";
+import { React, useEffect, useState } from "react";
 import CarouselSecondCard from "./CarouselSecondCard";
 import './CarouselSecond.css';
 

@@ -6,13 +6,13 @@ import './DrinkList.css'
 
 export default function CreamyList() {
     
-    const [shots, setShots] = useState([])
+    const [drinks, setDrinks] = useState([])
     
     useEffect(()=> {
         axios
         .get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?c=Milk_/_Float_/_Shake`) 
         .then((data) => {
-            setShots(data.data.drinks)
+            setDrinks(data.data.drinks)
         })
         
         .catch((error)=> {
@@ -26,7 +26,7 @@ export default function CreamyList() {
             <hr size="8" width="40%" color="gray"></hr> 
             <h5 className='qoute'>"Clever's man qoute"</h5>
             <div className='listOfDrinks'>
-                {shots.map((drink, index) => (
+                {drinks.map((drink, index) => (
                     <DrinkCard 
                         key={drink.idDrink}
                         drinkName={drink.strDrink}
