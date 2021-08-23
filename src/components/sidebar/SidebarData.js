@@ -31,6 +31,11 @@ export const SidebarData = [
                 icon: <GiIcons.GiWineGlass />
             },
             {
+                title: 'Long Drinks',
+                path: '/longdrinks',
+                icon: <GiIcons.GiWineGlass />
+            },
+            {
                 title: 'Shots',
                 path: '/shots',
                 icon: <GiIcons.GiWineGlass />
