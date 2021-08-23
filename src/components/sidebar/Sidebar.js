@@ -79,7 +79,7 @@ const Sidebar = () => {
     return (
         <>
         
-        <IconContext.Provider value={{ color: '#ADD8E6'}}>
+        <IconContext.Provider value={{ color: '#70C9B1'}}>
             <Nav>
                 
                 <NavIcon>

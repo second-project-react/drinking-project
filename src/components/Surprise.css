@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lato+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
 
 .surpriseWrapper{
    width: 100%;
-   height: 300px;
-   /* background: linear-gradient(89.85deg, #FFF3B2 4.81%, #F3A78E 90.74%); */
-/* background-image: url("/src/cssImages/bg1.png"); */
+  min-height:  350px;
+   /* background-color: #F5F5F5; */
    padding: 1rem 2rem;
    position: relative;
    display: flex;
@@ -24,13 +24,18 @@
 .surpriseTitle h1{
    /* font-style: normal; */
    /* font-weight: bold; */
-   /* font-family: 'Oswald', sans-serif; */
+   font-family: 'Kaushan Script', cursive;
+ 
+   color:#447D8C;
    font-size: 40px;
+
    /* line-height: 44px; */
    margin-bottom: 10px;
    text-align: center;
 }
-
+.surpriseCocktail{
+    width:50px;
+}
 .subtitle{
     display: flex;
     flex-direction: row;
@@ -39,6 +44,13 @@
 
 .subtitle h4{
     margin: 0 1rem 0 0;
+    color:#3AB795;
+    color:#484848;
+
+    font-family: 'Allison', cursive;
+    font-size: 52px;
+
+
 }
 
 .surpriseRefresh{
@@ -89,6 +101,8 @@ margin: 0;
     background-color: #36454F;
     /* background: linear-gradient(89.85deg, #FFF3B2 4.81%, #F3A78E 90.74%); */
 
+    
+    background: linear-gradient(to right, #3AB795, #447D8C);
 
     
     border-radius: 20px;
@@ -145,7 +159,7 @@ margin: 0;
     position: absolute;
     bottom:20px; right:30%;
     height:110px; width:6px;
-    background: steelblue;
+    background: #303030;
     border-radius: 0 6px 0 0;
     transform: rotate(-18.5deg);
     transform-origin: left bottom;
@@ -195,7 +209,7 @@ margin: 0;
 #coaster {
     width: 130%; height: 4px;
     margin-left: -15%;
-    background: steelblue;
+    background: black;
     border-radius: 2px;
 }
 
@@ -255,10 +269,12 @@ margin: 0;
       }
       .surpriseTitle  .subtitle h4{
         margin-bottom: 30px;
-        font-size:15px;
+        font-size:25px;
         
     }
     .cocktailLoader{
         margin: 0;
+        /* height: 250px; */
+     
     }
   }

@@ -179,3 +179,26 @@ font-family: 'Montserrat', sans-serif;
    font-weight: 600;
   
 }
+
+/* mobile screens */
+@media screen and (max-width: 480px) {
+   .multiCardImg {
+      height: 130px;
+      border-radius:5px;
+      /* border: 1px solid white; */
+      filter: contrast(125%);
+      box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 30%);
+      transition: all 0.25s ease-in-out;
+   
+   }
+   .multidrinkName {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      margin: 5px 0 40px 0;
+      width: 100px;
+      cursor: pointer;
+      transition: font-weight 0.7s ease-in-out;
+   
+   }
+}

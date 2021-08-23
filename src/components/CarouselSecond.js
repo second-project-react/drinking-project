@@ -56,8 +56,8 @@ const CarouselSecond = ({ deviceType }) => {
 
   const [latest, setLatest] = useState([]);
     // const [cocktail,setCocktail]=useState(false)
-  const [modalShow, setModalShow] = useState(false);
-    const[cardID,setCardID]=useState('');
+  // const [modalShow, setModalShow] = useState(false);
+  //   const[cardID,setCardID]=useState('');
    
   useEffect(() => {
     axios

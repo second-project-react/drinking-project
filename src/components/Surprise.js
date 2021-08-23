@@ -75,19 +75,24 @@ const Surprise = () => {
               
                 
               />
-          
+          <div style={timer !== 0 ? { display: 'none' } : { display: 'block' }}>
             <div className="surpriseTitle">
-               <h1>Dont know what to Drink tonight?</h1>
+               <h1>Don't know what to Drink tonight??!</h1>
                <div className="subtitle">
                   <h4>Try our random cocktail generator</h4>
-                  <div class="spinner" style={timer === 0 ? { display: 'none' } : { display: 'block' }}></div>
+                  <img className="surpriseCocktail" src="./img/mai-thai.png" alt="drink" />
+               </div>
+                <div  style={timer === 0 ? { display: 'none' } : { display: 'block' }}> Your Drink is getting Filled</div>
+                  {/* <div class="spinner" style={timer === 0 ? { display: 'none' } : { display: 'block' }}></div>  */}
+              
+               
                </div>
             </div>
          
          <div className="cocktailLoader" onClick={()=>loaderAnimate()}>
          <div id="loader">
-            <div id="lemon" style={timer >=90 ? {opacity: 1} : {opacity: 0} }></div>
-            <div id="straw" style={timer >=80 ? {opacity: 1} : {opacity: 0} }></div>
+               <div id="lemon" style={{ opacity: 1 }}></div>
+            <div id="straw" style={ {opacity: 1} }></div>
             <div id="glass">
                <div id="cubes">
                      <div></div>

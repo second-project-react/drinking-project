@@ -118,7 +118,7 @@ const MultiIngredient = () => {
                </div>
             <Row>
                
-            <Col md={4}>
+               <Col s={12} xs={12} md={10} l={4} xl={4}>
                   <div className="selectBox"> 
                      <div className="multiInputfield">
       
@@ -141,7 +141,7 @@ const MultiIngredient = () => {
                   </div>
                   </div>
             </Col>
-            <Col xs={8}>
+               <Col xs={12} s={12} md={12} l={8} xl={8}>
                   <div className="multiCardList">
                      { isLoading ?
                         <Spinner animation="border" variant="dark" /> :
