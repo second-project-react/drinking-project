@@ -33,7 +33,7 @@ const responsive = {
       min: 700,
     },
 
-    items: 2,
+    items: 1,
     slidesToSlide: 2,
     partialVisibilityGutter: 30,
   },

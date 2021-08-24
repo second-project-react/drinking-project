@@ -82,6 +82,18 @@
     border: 1px solid gray;
     border-radius: 5px;
   }
+
+  @media screen and (max-width: 600px){
+    /* .centerContainer {
+      display: none;
+    } */
+    .nameContainer {
+      display: none;
+    }
+    .footerContainer {
+      margin-top: 0;
+    }
+  }
   
   @media screen and (max-width: 1200px) {
     .footerContainer {
@@ -98,11 +110,11 @@
       flex-wrap: wrap;
       margin-bottom: 10px;
     }
-    .centerContainer {
+    /* .centerContainer {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-    }
+    } */
     
   }
 

@@ -5,6 +5,7 @@ const Footer = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [thanks, setThanks] = useState("Drop a Message")
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,7 +13,7 @@ const Footer = () => {
     setName("");
     setEmail("");
     setMessage("");
-    alert("Thank You for your message");
+    setThanks("Thanks A Lot 😊");
   };
 
   return (
@@ -73,9 +74,10 @@ const Footer = () => {
       </div>
 
       <div className="formContainer">
-        <div>Drop a Message</div>
+        
         <div className="allLabels">
           <form className="formInputWrapper" onSubmit={handleSubmit}>
+            <div>{thanks}</div>
             <input
               className="inputBox"
               type="text"
