@@ -7,6 +7,7 @@ import { SidebarData } from './SidebarData'
 import Submenu from './SubMenu'
 import { IconContext } from 'react-icons/lib'
 import './Sidebar.css'
+import Searchbar from '../Searchbar'
 
 
 
@@ -91,6 +92,7 @@ const Sidebar = () => {
                     <img className="logo" src="./img/logo.png"  alt="drink" />  
                     </div>
                     </Link>
+                    <Searchbar />
                      
             </Nav>
             <SidebarNav sidebar={sidebar}>

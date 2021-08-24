@@ -13,10 +13,6 @@ import { Container } from "react-bootstrap";
 
 const Home = (props) => {
 
-   
-
-  
-
    return (
       <div>
 
@@ -41,7 +37,6 @@ const Home = (props) => {
     <div className="latestRow"> 
        <CarouselSecond />
     </div>
-
     </Container>
     </div>
 
