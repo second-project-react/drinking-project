@@ -2,11 +2,14 @@ import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import Sidebar from './components/sidebar/Sidebar';
+import Loader from './components/Loader';
 import Footer from "./Footer";
 
 // Pages
 // // MainPage
 import Home from './Home';
+// // Search Page
+import SearchList from './components/SearchList';
 // // Categories
 import ShotsList from './components/mainCarousel/Shots'
 import LongDrinksList from './components/mainCarousel/LongDrinksList'
@@ -47,8 +50,10 @@ function App() {
       <div className='App'>
           <Sidebar />
           <Switch>   
-                   
+            {/* Home Page */}
             <Route path='/' exact component={Home} />
+            {/* Search Page */}
+            <Route path='/search/:search' exact component={SearchList} />
             {/* Categories */}
             <Route path='/shots' exact component={ShotsList} />
             <Route path='/longdrinks' exact component={LongDrinksList} />
@@ -76,6 +81,7 @@ function App() {
             <Route path='/favorites' exact component={Favorites} />
 
           </Switch>
+          
           <Footer/>
        </div>
    </Router>
