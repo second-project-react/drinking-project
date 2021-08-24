@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Lato+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
+.surpriseWrapper{
+   width: 100%;
+  min-height:  350px;
+   /* background-color: #F5F5F5; */
+   padding: 1rem 2rem;
+   position: relative;
+   display: flex;
+   flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.surpriseTitleWrapper{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.surpriseTitle h1{
+   /* font-style: normal; */
+   /* font-weight: bold; */
+   font-family: 'Kaushan Script', cursive;
+ 
+   color:#447D8C;
+   font-size: 40px;
+
+   /* line-height: 44px; */
+   margin-bottom: 10px;
+   text-align: center;
+}
+.surpriseCocktail{
+    width:50px;
+}
+.subtitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.subtitle h4{
+    margin: 0 1rem 0 0;
+    color:#3AB795;
+    color:#484848;
+
+    font-family: 'Allison', cursive;
+    font-size: 52px;
+
+
+}
+
+.surpriseRefresh{
+   position: relative;
+   top: 150px;
+   width: 30px;
+   height: 30px;
+}
+.surpriseImg{
+   display: flex;
+   justify-content: center;
+}
+.surpriseImg img{
+   /* top: -20px;
+position: relative; */
+width: 440px;
+/* height: 100%; */
+object-fit: unset;
+transform: scale(0.78);
+border-radius: 32px;
+}
+.surpriseDesc{
+    background: linear-gradient(89.85deg, #FFF3B2 4.81%, #F3A78E 90.74%);
+   position: absolute;
+   width:90%;
+   bottom: 0px;
+   left:0px;
+   padding: 25px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+.surpriseDesc h3{
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 44px;
+/* identical to box height */
+color: #000000;
+margin: 0;
+}
+            
+/* Surprise Animation */
+.cocktailLoader{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 2rem;
+    background-color: #36454F;
+    /* background: linear-gradient(89.85deg, #FFF3B2 4.81%, #F3A78E 90.74%); */
+
+    
+    background: linear-gradient(to right, #3AB795, #447D8C);
+
+    
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+#loader {
+    position: absolute;
+    top: 20%;
+    left: 36%;
+    height: 100px;
+    width: 50px;
+}
+
+#glass {
+    position: relative;
+    height: 100%;
+    background: rgba(255,255,255,.1);
+    border-radius: 0% 0% 15% 15%;
+    border: 3px solid;
+    border-top: 0;
+    border-bottom: 10px solid;
+    border-color: rgba(255,255,255,.7);
+    overflow: hidden;
+}
+#drink {
+    position: absolute;
+    top:100%; right:0; bottom:0; left:0;
+    background: linear-gradient(to bottom, yellow, orangered);
+    box-shadow: inset 0 2px 1px rgba(255,69,0,.2);
+    opacity: .7;
+}
+#counter {
+    position: relative;
+    line-height: 100px;
+    font-size: 11px;
+    color: rgba(255,255,255,1);
+}
+
+#lemon {
+    position: absolute;
+    top:0; right:0;
+    height:40px; width:40px;
+    margin-top:-19px; margin-right:-19px;
+    background: radial-gradient(#f7f3b6 10%, #d7d26c);
+    border-radius: 50%;
+    border: 2px solid #47582e;
+    box-shadow: inset 0 0 0 2px #f7f3b6;
+    transition: opacity 0.5s;
+  opacity: 0;
+}
+#straw {
+    position: absolute;
+    bottom:20px; right:30%;
+    height:110px; width:6px;
+    background: #303030;
+    border-radius: 0 6px 0 0;
+    transform: rotate(-18.5deg);
+    transform-origin: left bottom;
+    -webkit-transform: rotate(-18.5deg);
+    -webkit-transform-origin: left bottom;
+    opacity: 0;
+}
+#straw:after {
+    content: '';
+    position: absolute;
+    top:0; right:0;
+    height:6px; width:40px;
+    background: inherit;
+    border-radius: 0 6px 0 0;
+}
+
+#cubes {
+    position: absolute;
+    top:0; right:0; bottom:0; left:0;
+}
+#cubes div {
+    /*display: none;*/
+    position: absolute;
+    width:25px; height:25px;
+    background: rgba(255,255,255,.3);
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(255,255,255,.6);
+}
+#cubes div:nth-child(1) {
+    bottom:0;
+}
+#cubes div:nth-child(2) {
+    bottom:22.5px; left:12.5px;
+    transform: rotate(32deg);
+    transform-origin: center bottom;
+    -webkit-transform: rotate(32deg);
+    -webkit-transform-origin: center bottom;
+}
+#cubes div:nth-child(3) {
+    bottom:45px; left:10px;
+    transform: rotate(-34deg);
+    transform-origin: center bottom;
+    -webkit-transform: rotate(-34deg);
+    -webkit-transform-origin: center bottom;
+}
+
+#coaster {
+    width: 130%; height: 4px;
+    margin-left: -15%;
+    background: black;
+    border-radius: 2px;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid black; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* 
+  Ipad Screens */
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+  .surpriseWrapper{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .surpriseTitle h1{
+   font-size: 35px;
+    text-align: center;
+    margin-top: 10px;
+ } 
+ .surpriseTitle  .subtitle{
+     margin-bottom: 22px;
+ }
+.cocktailLoader{
+    margin:0;
+}}
+
+/* Mobile  screens  */
+@media only screen 
+  and (max-device-width: 767px) {
+    .surpriseWrapper{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .surpriseTitle h1{
+        font-size: 25px;
+         text-align: center;
+         margin-top: 15px;
+      } 
+      .surpriseTitle  .subtitle{
+          display:flex;
+          justify-content: center;
+      }
+      .surpriseTitle  .subtitle h4{
+        margin-bottom: 30px;
+        font-size:25px;
+        
+    }
+    .cocktailLoader{
+        margin: 0;
+        /* height: 250px; */
+     
+    }
+  }

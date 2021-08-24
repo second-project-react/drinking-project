@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* .multiIngredient{
+   background: linear-gradient(90.21deg, #FFEDC1 6.22%, #FFDFC3 28.27%, #FEDDDF 59.88%, #FFECBC 91.95%);
+opacity: 0.77;} */
+ 
+
+
+.muliTitleh1{
+   font-family: 'Montserrat', sans-serif;
+
+}
+.muliTitleDiv{
+   display:flex;
+   justify-content:center;
+   align-items: center;
+   flex-direction: column;
+}
+.muliTitle{
+  
+   /* padding:20px;
+   margin-top:30px; */
+   margin-left:40px;
+}
+ .custom-hr {
+
+   justify-content:center;
+   align-items: center;
+   height: 1.5px;
+   /* border: 0.001px solid black; */
+   background-color: black;
+
+}
+.multiSelected
+{
+margin-left:30px;
+margin-left:20px;
+font-family: 'Montserrat', sans-serif;
+}
+.selectBox{
+ /* background: #FDF9F9;  */
+ background-color: #FFF4E7;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   border-radius: 41px;
+   margin-top: 50px;
+   border:1px solid gray;
+   box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 10%);
+   
+}
+
+
+
+.multiInputfield{
+   margin: 0 auto;
+   padding: 30px 24px;
+}
+
+#inputField{
+   background: #FFFFFF;
+   border: 1px solid #000000;
+   width: 100%;
+   padding: 10px 11px 11px 11px;
+   border-radius: 16px;
+   box-shadow: none;
+   outline: none;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+#listIngredient{
+   overflow-y: scroll;
+   height: 800px;
+  box-shadow: darkgrey;
+   padding: 16px;
+   text-align: center;
+      scrollbar-width: thin;          /* "auto" or "thin" */
+      scrollbar-color: #FDBCBF white; 
+
+
+      
+}
+#listIngredient::-webkit-scrollbar {
+   width: 10px;               /* width of the entire scrollbar */
+ }
+ 
+ #listIngredient::-webkit-scrollbar-track {
+   background: white;        /* color of the tracking area */
+ }
+ 
+ #listIngredient::-webkit-scrollbar-thumb {
+   background-color:  #FDBCBF;    /* color of the scroll thumb */
+   border-radius: 10px;       /* roundness of the scroll thumb */
+ /* border: 2px solid gray;   */
+   /* creates padding around scroll thumb */
+ } 
+.ingredientImage{
+   filter: contrast(140%);
+ 
+}
+
+.chipMain
+
+   {
+      display: inline-block;
+      padding: 0 12px;
+      height: 25px;
+      font-size: 12px;
+      line-height: 25px;
+      border-radius: 25px;
+      border:0.3px solid black;
+      
+      background: linear-gradient(89.83deg, #FDD1D3 -3.08%, rgba(253, 209, 211, 0) 126.09%);
+    
+      margin: 2px;
+      cursor: pointer;
+      transition: 0.65s ease-in-out;
+    }
+    .chipMain:hover{
+      background-color: #FFD977;
+      border:0.6px solid black;
+    }
+.chipActive{
+   background-color: #FFD977;
+   border:1.2px solid black;
+}
+    
+
+.chip {
+   display: inline-block;
+   padding: 0 25px;
+   height: 30px;
+   font-size: 16px;
+   line-height: 30px;
+   border-radius: 25px;
+
+   background: linear-gradient(180deg, #FFE193 39.6%, rgba(255, 225, 147, 0) 129.7%);
+
+   margin:2px;
+ }
+ 
+ .multiCardList{
+   display: flex;
+   flex-wrap: wrap;
+   font-size: 5px;
+   justify-content: space-around;
+   font-family: 'Lato', sans-serif;
+   margin-top: 70px;
+
+
+ }
+/* 
+ Card CSS */
+ .multiCardImg {
+   height: 160px;
+   border-radius: 20px;
+   /* border: 1px solid white; */
+   filter: contrast(125%);
+   box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 30%);
+   transition: all 0.25s ease-in-out;
+
+}
+.multiCardImg:hover{
+   transform:scale(1.13);
+
+}
+
+
+
+.multidrinkName {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   font-size: 20px;
+   margin: 5px 0 40px 0;
+   width: 200px;
+   cursor: pointer;
+   transition: font-weight 0.7s ease-in-out;
+
+}
+.multidrinkName:hover{
+   font-weight: 600;
+  
+}
+
+/* mobile screens */
+@media screen and (max-width: 480px) {
+   .multiCardImg {
+      height: 130px;
+      border-radius:5px;
+      /* border: 1px solid white; */
+      filter: contrast(125%);
+      box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 30%);
+      transition: all 0.25s ease-in-out;
+   
+   }
+   .multidrinkName {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      margin: 5px 0 40px 0;
+      width: 100px;
+      cursor: pointer;
+      transition: font-weight 0.7s ease-in-out;
+   
+   }
+}
