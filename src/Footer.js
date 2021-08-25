@@ -1,17 +1,67 @@
 import './Footer.css';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios'
 
 const Footer = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+    
+    // axios.post('http://localhost:5000/message', { name:'pallavi',email:'pal@gmail.com',message:'connecting react to db'},)
+    //   .then((data) => {
+    //   console.log("Hi Jaime")
+    //    console.log(data.data[0])
+    // Jaime's code
+  //   axios({
+  //     method: "post",
+  //     url: "http://localhost:5000/message",
+  //     data: { name: 'pallavi', email: 'pal@gmail.com', message: 'connecting react to db' },
+  //     headers: {
+  //       'Access-Control-Allow-Origin': '*',
+  //       'Content-type': 'application/json',
+  //     }
+  //   })
+  //     .then((data) => {
+  //       console.log("Hi Jaime")
+  //       console.log(data.data[0])})
+   
+    
+  //   .catch((error)=> {
+  //       console.log(error)
+  //   })
+  // }, [])
+  
+//   const res = await axios.post('https://httpbin.org/post', { hello: 'world' });
+
+// res.data.json;
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios({
+      method: "post",
+      url: "http://localhost:5000/message",
+      data: { name: name , email: email, message: message },
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-type': 'application/json',
+      }
+    })
+      .then((data) => {
+        console.log("Hi Jaime")
+        console.log(data.data[0])})
+   
+    
+    .catch((error)=> {
+        console.log(error)
+    })
+
+
     console.log("CLICK", email);
-    setName("");
-    setEmail("");
-    setMessage("");
+     setName("");
+     setEmail("");
+     setMessage("");
     alert("Thank You for your message");
   };
 

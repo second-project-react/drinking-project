@@ -20,7 +20,8 @@ function Searchbar () {
           onChange={(e) => setSearch(e.target.value)}
         />
       </label>
-      <Link to={`/search/${search}`}><BiIcons.BiSearchAlt className="searchIcon"/></Link>    
+        <Link to={`/search/${search}`}><BiIcons.BiSearchAlt className="searchIcon" /></Link>
+   
     </div>
   )
 }

@@ -34,7 +34,7 @@ const responsive = {
     },
 
     items: 2,
-    slidesToSlide: 2,
+    slidesToSlide: 1,
     partialVisibilityGutter: 30,
   },
 };
@@ -46,6 +46,7 @@ const CarouselTop = ({ deviceType }) => {
   swipeable={true}
   draggable={true}
   showDots={true}
+
   responsive={responsive}
   ssr={false} // means to render carousel on server-side.
   infinite={false}
@@ -54,7 +55,7 @@ const CarouselTop = ({ deviceType }) => {
   customTransition="all .5"
   transitionDuration={1000}
   containerClass="carousel-container"
-  removeArrowOnDeviceType={["tablet", "mobile"]}
+   removeArrowOnDeviceType={[ "mobile"]}
   deviceType={deviceType}
   dotListClass="custom-dot-list-style"
   itemClass="carousel-item-padding-40-px"
