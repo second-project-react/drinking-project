@@ -40,12 +40,14 @@ import Favorites from './components/pages/Favorites';
 import Ingredient from './components/Ingredient';
 
 
+
+
 // process.env.REACT_APP_SECRET_KEY
 function App() {
   
 
   return (
-
+    
     <Router>
       <div className='App'>
           <Sidebar />
@@ -84,7 +86,8 @@ function App() {
           
           <Footer/>
        </div>
-   </Router>
+      </Router>
+     
   )
 
 }
