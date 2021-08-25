@@ -108,14 +108,14 @@ const MultiIngredient = () => {
       <div  className="multiIngredient">
       <Container>
          
-            <div className="muliTitleDiv">
+            {/* <div className="muliTitleDiv">
             <div className="muliTitle">
                <h1 ClassName="muliTitleh1">Search By Ingredients</h1>
   
              
-            </div>
+            </div> */}
                {/* <hr className="custom-hr" size="50" width="40%" ></hr> */}
-               </div>
+               {/* </div> */}
             <Row>
                
                <Col s={12} xs={12} md={10} l={4} xl={4}>
@@ -141,7 +141,7 @@ const MultiIngredient = () => {
                   </div>
                   </div>
             </Col>
-               <Col xs={12} s={12} md={12} l={8} xl={8}>
+               <Col xs={12} s={12} md={12} l={8} xl={8} className="secondhalfMulti">
                   <div className="multiCardList">
                      { isLoading ?
                         <Spinner animation="border" variant="dark" /> :

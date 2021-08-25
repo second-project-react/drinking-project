@@ -3,9 +3,12 @@
    background: linear-gradient(90.21deg, #FFEDC1 6.22%, #FFDFC3 28.27%, #FEDDDF 59.88%, #FFECBC 91.95%);
 opacity: 0.77;} */
  
+.multiIngredient{
+   margin-top: 70px;
 
+}
 
-.muliTitleh1{
+/* .muliTitleh1{
    font-family: 'Montserrat', sans-serif;
 
 }
@@ -14,7 +17,7 @@ opacity: 0.77;} */
    justify-content:center;
    align-items: center;
    flex-direction: column;
-}
+} */
 .muliTitle{
   
    /* padding:20px;
@@ -179,7 +182,15 @@ font-family: 'Montserrat', sans-serif;
    font-weight: 600;
   
 }
+.secondhalfMulti{
+   height:1000px;
+   overflow-y: scroll;
+   background: linear-gradient(
+      30.11deg
+      , rgba(255, 255, 255, 0.3) 54.41%, rgba(255, 238, 147, 0.3) 72.74%, rgba(233, 255, 216, 0.3) 86.69%);
 
+      border-radius:20px;
+}
 /* mobile screens */
 @media screen and (max-width: 480px) {
    .multiCardImg {
