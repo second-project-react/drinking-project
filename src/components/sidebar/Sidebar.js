@@ -83,7 +83,7 @@ const Sidebar = () => {
         <IconContext.Provider value={{ color: '#70C9B1'}}>
             <Nav>
                 
-                <NavIcon>
+                    <NavIcon>
                     <FaIcons.FaBars onClick={ShowSidebar}/>
                     </NavIcon> 
                     <Link to='/'><p className="pageName">The CockTail Bar</p></Link>
