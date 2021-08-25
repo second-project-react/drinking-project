@@ -1,5 +1,10 @@
 import './Footer.css';
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+import React, { useState, useEffect } from "react";
+import axios from 'axios'
+>>>>>>> 9c4a1f7a1471c1f269383c0554f341726d9c83da
 
 const Footer = () => {
    const [name, setName] = useState('');
@@ -7,6 +12,7 @@ const Footer = () => {
    const [message, setMessage] = useState('');
    const [thanks, setThanks] = useState('Drop a Message');
 
+<<<<<<< HEAD
    const handleSubmit = (e) => {
       e.preventDefault();
       console.log('CLICK', email);
@@ -15,6 +21,65 @@ const Footer = () => {
       setMessage('');
       setThanks('Thanks A Lot 😊');
    };
+=======
+    
+    // axios.post('http://localhost:5000/message', { name:'pallavi',email:'pal@gmail.com',message:'connecting react to db'},)
+    //   .then((data) => {
+    //   console.log("Hi Jaime")
+    //    console.log(data.data[0])
+    // Jaime's code
+  //   axios({
+  //     method: "post",
+  //     url: "http://localhost:5000/message",
+  //     data: { name: 'pallavi', email: 'pal@gmail.com', message: 'connecting react to db' },
+  //     headers: {
+  //       'Access-Control-Allow-Origin': '*',
+  //       'Content-type': 'application/json',
+  //     }
+  //   })
+  //     .then((data) => {
+  //       console.log("Hi Jaime")
+  //       console.log(data.data[0])})
+   
+    
+  //   .catch((error)=> {
+  //       console.log(error)
+  //   })
+  // }, [])
+  
+//   const res = await axios.post('https://httpbin.org/post', { hello: 'world' });
+
+// res.data.json;
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios({
+      method: "post",
+      url: "http://localhost:5000/message",
+      data: { name: name , email: email, message: message },
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-type': 'application/json',
+      }
+    })
+      .then((data) => {
+        console.log("Hi Jaime")
+        console.log(data.data[0])})
+   
+    
+    .catch((error)=> {
+        console.log(error)
+    })
+
+
+    console.log("CLICK", email);
+     setName("");
+     setEmail("");
+     setMessage("");
+    alert("Thank You for your message");
+  };
+>>>>>>> 9c4a1f7a1471c1f269383c0554f341726d9c83da
 
    return (
       <div className="footerContainer">

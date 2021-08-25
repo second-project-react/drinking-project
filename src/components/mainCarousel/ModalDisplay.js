@@ -1,12 +1,17 @@
 import Axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Modal, Spinner } from "react-bootstrap";
+import { UserContext } from "../../App";
 import "./ModalDisplay.css";
+
+
+
+
 
 function ModalDisplay(props) {
   const [value, setValue] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-
+  
 
   const [cocktailId, setCocktailID] = useState(props.cocktailid);
   const[favoriteButton,setFavoriteButton]=useState(0)
@@ -125,7 +130,7 @@ function ModalDisplay(props) {
           </div>
         ) : (
           <div className="cocktail">
-            
+            {/* <h2 className="card1_drinkName">{user}</h2> */}
             <h2 className="card1_drinkName">{value.strDrink}</h2>
             <h5 className="drinkCategory">{value.strAlcoholic}</h5>
             {/* <h5 className="drinkCategory">{value.strGlass}</h5> */}
