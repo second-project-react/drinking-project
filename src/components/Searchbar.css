@@ -33,4 +33,31 @@ label {
 }
 
 @media screen and (max-width: 480px) {
+   .searchbarContainer {
+      /* align-self: center; */
+      justify-content: center;
+      margin-right: 0;
+      padding: 10px;
+      position: relative;
+      /* display: none; */
+   }
+}
+@media screen and (min-width: 1024px) and (max-width: 1266px) {
+   .inputSearch {
+      width: 250px;
+   }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+   .inputSearch {
+      width: 200px;
+   }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+   .searchbarContainer {
+      justify-content: center;
+      padding: 10px;
+   }
+   .inputSearch {
+      width: 250px;
+   }
 }

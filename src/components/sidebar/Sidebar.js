@@ -19,6 +19,19 @@ const Nav = styled.div`
    display: flex;
    justify-content: space-between;
    align-items: center;
+   @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+   }
+
+   @media (max-width: 600px) {
+      flex-direction: row;
+      align-items: center;
+   }
+   @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+   }
 `;
 
 const NavIcon = styled(Link)`
@@ -28,9 +41,16 @@ const NavIcon = styled(Link)`
    display: flex;
    justify-content: flex-start;
    align-items: center;
-
    svg {
       color: black;
+   }
+
+   @media (max-width: 768px) {
+      margin-left: 0;
+   }
+   @media (max-width: 480px) {
+      margin-left: 0;
+      height: 40;
    }
 `;
 
@@ -72,7 +92,7 @@ const Sidebar = () => {
    return (
       <>
          <IconContext.Provider value={{ color: '#70C9B1' }}>
-            <Nav>
+            <Nav className="navbar">
                <div className="pageNameAndLogo">
                   <NavIcon>
                      <FaIcons.FaBars onClick={ShowSidebar} />

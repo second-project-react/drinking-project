@@ -28,19 +28,27 @@ h5 {
 .featured {
    /* margin-bottom: 30px; */
    /* font-family: 'Lato', sans-serif; */
-   /* font-family: 'Poppins', sans-serif; */
+   font-family: 'Poppins', sans-serif;
    font-family: 'Allison', cursive;
    /* text-transform: uppercase; */
    text-align: center;
    font-size: 70px;
-   /* font-weight: 500; */
-   /* color: #3ab795; */
-   color: #447d8c;
+   font-weight: 500;
+   color: #3ab795;
+   /* color: #447d8c; */
    margin-bottom: -30px;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   .featured {
+      font-size: 35px;
+      padding-top: 50px;
+   }
+}
+
 /* for mobiles */
 @media screen and (max-width: 480px) {
    .featured {
-      font-size: 45px;
+      font-size: 25px;
+      padding-top: 30px;
    }
 }
