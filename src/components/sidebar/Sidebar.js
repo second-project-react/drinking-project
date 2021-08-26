@@ -134,7 +134,8 @@ const Sidebar = () => {
                </SidebarWrap>
             </SidebarNav>
             {sidebar && <PageWrapper onClick={ShowSidebar}></PageWrapper>}
-         </IconContext.Provider>
+           </IconContext.Provider>
+           <LoginForm />
       </>
    );
 };
