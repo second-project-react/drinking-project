@@ -8,6 +8,7 @@ import Submenu from './SubMenu'
 import { IconContext } from 'react-icons/lib'
 import './Sidebar.css'
 import Searchbar from '../Searchbar'
+import LoginForm from './LoginForm'
 
 
 
@@ -45,19 +46,21 @@ const SidebarNav = styled.nav`
     width: 250px;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
     transition: 350ms;
     z-index: 12;
     opacity: 0.9;
-
 `;
 
 const SidebarWrap = styled.div`
     width: 100%;
 `;
+
+
 // const pageName = styled.h1`
 //   color: blue;
 // `;
@@ -105,7 +108,10 @@ const Sidebar = () => {
                         <Submenu item={item} key={index}/>
                     )
                 })}
-                </SidebarWrap>
+                    </SidebarWrap>
+                 
+                        
+                    <LoginForm />
                 </SidebarNav>
                 {sidebar && <PageWrapper onClick={ShowSidebar}></PageWrapper>}
         </IconContext.Provider>    

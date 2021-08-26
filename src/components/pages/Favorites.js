@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect,useState } from 'react'
 
 import DrinkCard from '../mainCarousel/DrinkCard'
@@ -8,19 +9,36 @@ const Favorites = () => {
    const [favItems, setFavItems] = useState([]);
    
    useEffect(() => {
-      let favList = JSON.parse(localStorage.getItem("favorites") || "[]")
-      setFavItems(favList);
-   },[favItems])
    
-   const clearAll = () => {
-      localStorage.clear();
-   }
+    //~getting logged in user data from local storage and save the user id along with the favorite cocktail data
+    setTimeout(() => {
+       const user = JSON.parse(localStorage.getItem("user"))
+       if (user) {
+           
+        getFavoriteCocktails(user.id)
+       } }, 1000)
+   },[])
+
+//~Get complete list of favorites per User logged in
+    const getFavoriteCocktails = (id) => {
+      
+    axios.get(`http://localhost:5000/favorites/user/${id}`)
+    .then((response) => response.data)
+   .then((data)=>{
+        setFavItems(data)
+    })
+  .catch((error) => {
+    console.log(error);
+  }); ;
+  }  
+ 
+   
    return (
       <div className='mainDiv'>
           <h2 className='drinkType'>Favorites</h2>
           {/* <hr size="8" width="40%" color="gray"></hr>  */}
          <h5 className='qoute'>"Life is short, wear your party pants and get drunk ;)"</h5>
-         <button onClick={clearAll}> Clear All </button>
+         {/* <button onClick={clearAll}> Clear All </button> */}
           <div className='listOfDrinks'>
               {favItems.map((drink, index) => (
                   <DrinkCard 
