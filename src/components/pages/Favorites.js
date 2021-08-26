@@ -5,9 +5,10 @@ import DrinkCard from '../mainCarousel/DrinkCard'
 import '../mainCarousel/DrinkCard.css'
 
 
+
 const Favorites = () => {
    const [favItems, setFavItems] = useState([]);
-   
+
    useEffect(() => {
    
     //~getting logged in user data from local storage and save the user id along with the favorite cocktail data
@@ -50,6 +51,6 @@ const Favorites = () => {
               ))}
           </div>
       </div>
-  )
-}
+   );
+};
 export default Favorites;
