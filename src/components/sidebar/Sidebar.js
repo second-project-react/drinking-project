@@ -17,7 +17,7 @@ const Nav = styled.div`
    background: white;
    position: fixed;
    top: 0;
-   z-index: 10;
+   z-index: 1001;
    height: 80px;
    display: flex;
    justify-content: space-between;
@@ -68,7 +68,7 @@ const SidebarNav = styled.nav`
     top: 0;
     left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
     transition: 350ms;
-    z-index: 12;
+    z-index: 1200;
     opacity: 0.9;
 `;
 
@@ -84,7 +84,7 @@ const PageWrapper = styled.div`
    width: 100vw;
    height: 100vh;
    position: fixed;
-   z-index: 11;
+   z-index: 1100;
    background-color: black;
    opacity: 0.4;
    top: 0;
@@ -131,11 +131,12 @@ const Sidebar = () => {
                   {SidebarData.map((item, index) => {
                      return <Submenu item={item} key={index} />;
                   })}
-               </SidebarWrap>
+                   </SidebarWrap>
+                   <LoginForm />
             </SidebarNav>
             {sidebar && <PageWrapper onClick={ShowSidebar}></PageWrapper>}
            </IconContext.Provider>
-           <LoginForm />
+           
       </>
    );
 };

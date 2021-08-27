@@ -42,7 +42,98 @@ app.post("/message", (req, res) => {
   .catch((err) => res.send(err));
   });
 
+  // Favorites
 
+app.get("/favorites/user/:id", (req, res) => {
+  const id = req.params.id;
+    database
+      .promise()
+      .query("SELECT * FROM favorites WHERE userId = (?)", [id])
+      .then((data) => {
+        res.send(data[0]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
+
+
+  app.get("/favorites/cocktail/:id/:userId", (req, res) => {
+    const id = req.params.id;
+    const userId = req.params.userId;
+
+    console.log(id)
+      database
+        .promise()
+        .query("SELECT * FROM favorites WHERE idDrink = (?) AND userId = (?)", [id, userId])
+        .then((data) => {
+          res.send(data[0]);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+  });
+    
+
+  app.get("/favorites/delete/:id/:userId", (req, res) => {
+    const id = req.params.id;
+    const userId = req.params.userId;
+
+      database
+        .promise()
+        .query("SELECT * FROM favorites WHERE idDrink = (?) AND userId = (?)", [id, userId])
+        .then((data) => {
+          console.log(data)
+          database
+          .promise()
+            .query("DELETE FROM favorites WHERE id = (?)", [data[0][0].id])
+            .then(() => {
+              res.send("deleted");
+            })
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    });
+
+
+
+
+  app.post("/favorites", (req, res) => {
+    const { idDrink, strDrink, strDrinkThumb,userId} = req.body;
+    database
+    .promise()
+    .query("INSERT INTO favorites (idDrink, strDrink, strDrinkThumb,userId) VALUES(?,?,?,?)", [idDrink, strDrink, strDrinkThumb,userId])
+    .then((data) => res.send(data))
+    .catch((err) => res.send(err));
+    });
+  
+
+
+
+
+// Login
+app.post("/login", (req, res) => {
+  const { username, password } = req.body;
+ console.log(username)
+    database
+      .promise()
+      .query("SELECT * FROM users WHERE username = (?)", [username])
+      .then((data) => {
+        if (data[0][0].password == password) {
+          res.send(data[0][0]);
+        }
+        else {
+          res.send(null)
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        res.send(null)
+            });
+  });
+  
 
 // UPDATE note
 

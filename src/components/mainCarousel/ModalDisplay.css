@@ -162,6 +162,11 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.38);
  
  }
 
+ .loginText{
+     color: black;
+     font-size: 12px;
+ }
+
  .active {
      border-color: red;
  }

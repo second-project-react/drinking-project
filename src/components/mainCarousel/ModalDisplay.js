@@ -1,8 +1,8 @@
-import axios from "axios";
+
 import Axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import { Modal, Spinner } from "react-bootstrap";
-import { UserContext } from "../../App";
+
 import "./ModalDisplay.css";
 
 
@@ -12,7 +12,7 @@ import "./ModalDisplay.css";
 function ModalDisplay(props) {
   const [value, setValue] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
 
   const [cocktailId, setCocktailID] = useState(props.cocktailid);
   const[favoriteButton,setFavoriteButton]=useState(0)
@@ -41,7 +41,8 @@ function ModalDisplay(props) {
     //~getting logged in user data from local storage and save the user id along with the favorite cocktail data
     const user = JSON.parse(localStorage.getItem("user"))
 
-    if (props.show) {
+    if (props.show && user) {
+      setUserLoggedIn(true)
       checkIfCocktailInDb(props.cocktailid, user.id)
     }
 
@@ -54,13 +55,16 @@ function ModalDisplay(props) {
 
     //~getting logged in user data from local storage and save the user id along with the favorite cocktail data
     const user = JSON.parse(localStorage.getItem("user"))
+    let  drinkData = {}
+    if (user) {
+      drinkData = {
+        idDrink: value.idDrink,
+        strDrink: value.strDrink,
+        strDrinkThumb: value.strDrinkThumb,
+        userId: user.id
+      }
 
-    const drinkData = {
-      idDrink: value.idDrink,
-      strDrink: value.strDrink,
-      strDrinkThumb: value.strDrinkThumb,
-      userId: user.id
-    }
+
 
     if (favoriteButton === 0)  {
       setFavoriteButton(1);
@@ -76,6 +80,7 @@ function ModalDisplay(props) {
       setFavoriteButton(1);
       //~save the cocktail to DB
       saveToDatabase(drinkData)
+      }
     }
   }
   
@@ -224,11 +229,11 @@ function ModalDisplay(props) {
               </div>
               <p className="drinkInstructions">{instrLanguageHandler || value.strInstructions}</p>
             </div>
-
               <div className={favoriteButton===1 ? 'active favBtn' : 'favBtn' }  id="btn" onClick={ ()=> favBtn () }>
               <div className="heart"></div>
-              <h3>Favorite this!</h3>
-            </div>
+                <h3>Favorite this!</h3>
+              </div>
+              {!userLoggedIn && <p className="loginText">User not found! Login to your account</p>}
           </div>
         )}
       </Modal.Body>
