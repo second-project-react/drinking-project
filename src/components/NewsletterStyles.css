@@ -67,8 +67,8 @@
    /* border: 1px solid black; */
    padding: 0 25px 25px 25px;
    border-radius: 10px;
-   width: 280px;
-   height: 250px;
+   width: 320px;
+   height: 280px;
    /* background: linear-gradient(
       30.11deg,
       #ffffff -11.43%,
@@ -97,8 +97,28 @@
    height: 30px;
    margin: 5px;
 }
+.signUpContainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+}
 .signUp {
    font-size: 20px;
    text-align: center;
    font-family: 'Lato', sans-serif;
+   font-weight: bold;
+}
+.emaillIconSmall {
+   text-align: center;
+   width: 50px;
+   height: auto;
+   /* padding: 5px; */
+}
+@media screen and (max-height: 480px) {
+   .formNewsContainer {
+      width: 200px;
+      height: auto;
+   }
 }
