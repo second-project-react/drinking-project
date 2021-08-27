@@ -26,7 +26,8 @@ export default function SearchList({ match }) {
          <h5 className="qoute">
             “Live for today, plan for tomorrow, party tonight, party tonight.”
          </h5>
-         {drinks ? (
+         {match.params.search ? 
+         drinks ? (
             <div className="listOfDrinks">
                {drinks.map((drink, index) => (
                   <DrinkCard
@@ -38,8 +39,11 @@ export default function SearchList({ match }) {
                ))}
             </div>
          ) : (
-            <p>Sorry, this drink does not exist!</p>
-         )}
+            <h4>Sorry, this drink does not exist!</h4>
+         )
+         :  
+         (<h4>No drink selected!</h4>) 
+         }
       </div>
    );
 }

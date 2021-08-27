@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './NewsletterStyles.css';
+import axios from "axios"
 
 const Newsletter = () => {
    const [name, setName] = useState('');
@@ -8,10 +9,26 @@ const Newsletter = () => {
 
    const handleSubmit = (e) => {
       e.preventDefault();
-      console.log('CLICK', email);
+      axios({
+         method: 'post',
+         url: 'http://localhost:5000/subscribe',
+         data: { name: name, email: email },
+         headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-type': 'application/json',
+         },
+      })
+         .then((data) => {
+            console.log(data.data[0]);
+         })
+
+         .catch((error) => {
+            console.log(error);
+         });
+      
+         console.log('CLICK', email);
       setName('');
       setEmail('');
-
       setSignUp('Check Your Inbox!');
       // alert("Thank You for your message");
    };

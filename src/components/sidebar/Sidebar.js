@@ -132,10 +132,11 @@ const Sidebar = () => {
                      return <Submenu item={item} key={index} />;
                   })}
                </SidebarWrap>
+               <LoginForm />
             </SidebarNav>
             {sidebar && <PageWrapper onClick={ShowSidebar}></PageWrapper>}
            </IconContext.Provider>
-           <LoginForm />
+           
       </>
    );
 };

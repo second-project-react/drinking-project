@@ -47,7 +47,7 @@ const responsive = {
     },
 
     items: 3,
-    slidesToSlide: 2,
+    slidesToSlide: 1,
     partialVisibilityGutter: 30,
   },
 };

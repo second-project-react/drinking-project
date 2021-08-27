@@ -2,7 +2,6 @@ import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import Sidebar from './components/sidebar/Sidebar';
-import Loader from './components/Loader';
 import Footer from "./Footer";
 
 // Pages
@@ -56,6 +55,7 @@ function App() {
             <Route path='/' exact component={Home} />
             {/* Search Page */}
             <Route path='/search/:search' exact component={SearchList} />
+            <Route path='/search' exact component={SearchList} />
             {/* Categories */}
             <Route path='/shots' exact component={ShotsList} />
             <Route path='/longdrinks' exact component={LongDrinksList} />
