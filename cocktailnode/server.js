@@ -21,6 +21,7 @@ database.connect((err) => {
   }
 });
 
+// Table messages
 app.get("/message", (req, res) => {
   database
     .promise()
@@ -41,6 +42,28 @@ app.post("/message", (req, res) => {
   .then((data) => res.send(data))
   .catch((err) => res.send(err));
   });
+
+  // Table newsletter
+  app.get("/subscribers", (req, res) => {
+    database
+      .promise()
+      .query("SELECT * FROM newsletter")
+      .then((data) => {
+        res.send(data[0]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
+  app.post("/subscribe", (req, res) => {
+    const { name, email } = req.body;
+    database
+    .promise()
+    .query("INSERT INTO newsletter (name, email) VALUES(?,?)", [name, email])
+    .then((data) => res.send(data))
+    .catch((err) => res.send(err));
+    });
 
 
 
