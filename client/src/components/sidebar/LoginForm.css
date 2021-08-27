@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.inputBoxForm{
+   width:auto;
+   height: 30px;
+   margin: 5px 15px;
+   padding: 10px;
+   border-radius:5px;
+   background-color: #4C5760;
+  
+}
+ ::placeholder{
+   color:#D0D0D0;
+} 
+.submitButtonForm{
+/* margin:10px 0 10px 60px; */
+
+margin:10px 10px;
+transition : all ease-in-out 0.5s;
+}
+.submitButtonForm:hover{
+   background-color: #3AB795;
+   color:#D0D0D0
+}
+.formGreeting{
+font-size:28px;
+margin:0 0 20px 8px;
+
+font-family: 'Montserrat',sans-serif;
+font-weight:500;
+
+background: #30E8BF;  
+background: -webkit-linear-gradient(to right, #FF8235, #3AB795);  
+background: linear-gradient(to right, #FF8235, #3AB795); 
+ background-size: 100%;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+.LogoutButtonForm{
+   height:30px;
+   padding:0 15px;
+   margin:0 0 10px 8px;
+ width:auto;
+ transition : all ease-in-out 0.5s;
+}
+
+.LogoutButtonForm:hover{
+   background-color: #3AB795;
+   color:#D0D0D0
+}
