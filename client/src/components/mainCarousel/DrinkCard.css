@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.drinkCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.img {
+    margin: 20px;
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    /* border: 3px solid white; */
+    filter: contrast(125%);
+    box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 30%);
+    transition: all 0.25s ease-in-out;
+}
+
+.img:hover {
+    transform:scale(1.13); 
+}
+
+
+.drinkName {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 10px 0 40px 0;
+}
+/* for larger screens */
+@media screen and (min-width: 2000px){
+    .img{
+        width: 220px;
+        height: auto;
+        margin: 50px;
+    }
+    .drinkName{
+        font-size: 30px;
+    }
+    
+}
+/* for laptops and dektops */
+@media screen and (max-width: 1800px){
+    
+}
+@media screen and (max-width: 1366px){
+    
+}
+
+/* for ipad */
+@media screen and (max-width: 1024px) {
+    .img{
+        width: 150px;
+        height: auto;
+        margin: 15px;
+    }
+    .drinkName{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .img{
+        width: 135px;
+        height: auto;
+        margin: 15px;
+    }
+    .drinkName{
+        font-size: 15px;
+    }
+}
+/* for mobiles */
+@media screen and (max-width: 480px) {
+    .img{
+        width: 120px;
+        height: auto;
+        margin: 15px;
+    }
+    .drinkName{
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+/* @media screen and (min-width: 1025px) and (max-width: 1366px) {
+    .img{
+        width: 175px;
+        height: auto;
+        margin: 15px;
+    }
+    .drinkName{
+        font-size: 18px;
+    }
+} */
+/* @media screen and (min-width: 1024px) and (max-width: 3000px) {
+    .img{
+        width: 120px;
+        height: auto;
+        margin: 15px;
+    }
+    .drinkName{
+        font-size: 15px;
+    }
+} */
+
+/* @media screen and (min-width: 1400px) and (max-width: 4500px) {
+    .img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+    width: 240px;
+    height: auto;
+    margin: 50px;
+    border-radius: 20px;
+    border: 3px solid white;
+    filter: contrast(125%);
+    }
+  
+} */
+/* @media screen and (min-width: 768px) and (max-width : 1399px) {
+    .img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 20px;
+    border: 3px solid white;
+    filter: contrast(125%);
+    }
+  
+} */
