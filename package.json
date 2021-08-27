@@ -1,35 +1,8 @@
 {
-<<<<<<< HEAD
-  "name": "cocktails-app",
-  "version": "0.1.0",
-  "engines": {
-    "node": "12.19.0"
-  },
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "axios": "^0.21.1",
-    "bootstrap": "^4.6.0",
-    "dotenv": "^8.2.0",
-    "react": "^17.0.2",
-    "react-bootstrap": "^1.6.1",
-    "react-dom": "^17.0.2",
-    "react-feather": "^2.0.9",
-    "react-icons": "^4.2.0",
-    "react-multi-carousel": "^2.6.3",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "styled-components": "^5.3.0",
-    "web-vitals": "^1.0.1"
-  },
-=======
   "name": "cocktailnode",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
->>>>>>> 9e1f8c908438b3626be60dee1ba9281c05679638
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
