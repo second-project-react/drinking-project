@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Lato+Sans');
+/* .App{
+  font-family: sans-serif;
+  text-align: center;
+} */
+.newsLetterContainer {
+   /* text-align: center; */
+   display: flex;
+   flex-direction: row;
+   align-self: center;
+   justify-content: space-around;
+   margin-left: 30px;
+   margin-top: 25px;
+   /* background: linear-gradient(
+      30.11deg,
+      #ffffff -11.43%,
+       #f3eab8 13.8%,
+      #f0d7bf 47.62%
+    ); */
+   opacity: 0.85;
+   padding: 10px;
+}
+.iconsContainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.footerIcons {
+   width: 50px;
+   height: auto;
+}
+.centerContainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.formNewsContainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   /* border: 1px solid black; */
+   padding: 0 25px 25px 25px;
+   border-radius: 10px;
+   width: 320px;
+   height: 280px;
+   /* background: linear-gradient(
+      30.11deg,
+      #ffffff -11.43%,
+      #ffee93 13.8%,
+      #f0d7bf 47.62%
+   ); */
+   background: linear-gradient(
+      30.11deg,
+      #ffffff -11.43%,
+      #f3eab8 13.8%,
+      #f0d7bf 47.62%
+   );
+}
+.formInputWrapper {
+   display: flex;
+   flex-direction: column;
+}
+
+.inputBoxNewsletter {
+   width: auto;
+   height: 30px;
+   margin: 5px;
+}
+.newsletterButton {
+   width: auto;
+   height: 30px;
+   margin: 5px;
+}
+.signUpContainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+}
+.signUp {
+   font-size: 20px;
+   text-align: center;
+   font-family: 'Lato', sans-serif;
+   font-weight: bold;
+}
+.emaillIconSmall {
+   text-align: center;
+   width: 50px;
+   height: auto;
+   /* padding: 5px; */
+}
+@media screen and (max-height: 480px) {
+   .formNewsContainer {
+      width: 200px;
+      height: auto;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .newsletterContainer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap-reverse;
+      justify-content: space-evenly;
+      margin-left: 0;
+      margin-top: 25px;
+   }
+   .iconsContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+   .centerContainer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+   }
+   .madeWith span:last-of-type {
+      display: block;
+   }
+}
