@@ -1,9 +1,8 @@
 import './Surprise.css';
-import { Code, RefreshCcw } from 'react-feather';
 import Axios from 'axios'
 import React, {  useEffect, useState } from 'react';
 import ModalDisplay from './mainCarousel/ModalDisplay';
-import IngredientCard from './IngredientCard';
+
 
 const Surprise = () => {
    

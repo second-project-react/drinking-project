@@ -12,25 +12,27 @@ const Favorites = () => {
    useEffect(() => {
    
     //~getting logged in user data from local storage and save the user id along with the favorite cocktail data
-    setTimeout(() => {
-       const user = JSON.parse(localStorage.getItem("user"))
-       if (user) {
-           
-        getFavoriteCocktails(user.id)
-       } }, 1000)
+    getFavoriteCocktails()
+    setInterval(() => {
+        getFavoriteCocktails()
+        }, 5000)
    },[])
 
 //~Get complete list of favorites per User logged in
-    const getFavoriteCocktails = (id) => {
-      
-    axios.get(`http://localhost:5000/favorites/user/${id}`)
+    const getFavoriteCocktails = () => {
+        const user = JSON.parse(localStorage.getItem("user"))
+        console.log("settimeout")
+        if (user) {
+           
+    axios.get(`http://localhost:5000/favorites/user/${user.id}`)
     .then((response) => response.data)
    .then((data)=>{
         setFavItems(data)
     })
   .catch((error) => {
     console.log(error);
-  }); ;
+  });
+}
   }  
  
    

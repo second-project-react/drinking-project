@@ -4,7 +4,7 @@
 opacity: 0.77;} */
 
 .multiIngredient {
-   /* margin-top: 70px; */
+ min-width: 80%;
 }
 
 /* .muliTitleh1{
@@ -42,6 +42,7 @@ opacity: 0.77;} */
    margin-top: 50px;
    border: 1px solid gray;
    box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 10%);
+   
 }
 
 .multiInputfield {

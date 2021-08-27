@@ -120,7 +120,7 @@ const MultiIngredient = () => {
                {/* <hr className="custom-hr" size="50" width="40%" ></hr> */}
                {/* </div> */}
                <Row>
-                  <Col s={12} xs={12} md={10} l={4} xl={4}>
+                  <Col s={12} xs={12} md={6} l={4} xl={4}>
                      <div className="selectBox">
                         <div className="multiInputfield">
                            <input
@@ -163,7 +163,7 @@ const MultiIngredient = () => {
                   <Col
                      xs={12}
                      s={12}
-                     md={12}
+                     md={6}
                      l={8}
                      xl={8}
                      className="secondhalfMulti"
