@@ -30,7 +30,7 @@ const Newsletter = () => {
       console.log('CLICK', email);
       setName('');
       setEmail('');
-      setSignUp('Check Your Inbox!');
+      setSignUp('You Are Awesome!');
       // alert("Thank You for your message");
    };
 
