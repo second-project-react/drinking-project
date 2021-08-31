@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './NewsletterStyles.css';
 import axios from "axios"
+import Realistic from './Confetti';
 
 const Newsletter = () => {
    const [name, setName] = useState('');
@@ -58,10 +59,7 @@ const Newsletter = () => {
                      required="true"
                      onChange={(e) => setEmail(e.target.value)}
                   />
-
-                  <button className="newsletterButton" type="submit">
-                     Send
-                  </button>
+                  <Realistic />
                </form>
             </div>
          </div>

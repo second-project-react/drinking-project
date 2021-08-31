@@ -34,7 +34,8 @@
 .centerContainer {
    display: flex;
    flex-direction: column;
-   justify-content: space-around;
+   justify-content: center;
+   flex-wrap: wrap;
    align-items: center;
 }
 .nameContainer {
@@ -84,9 +85,6 @@ button {
 }
 
 @media screen and (max-width: 600px) {
-   /* .centerContainer {
-      display: none;
-    } */
    .nameContainer {
       display: none;
    }

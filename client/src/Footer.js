@@ -41,7 +41,7 @@ const Footer = () => {
       <div className="footerContainer">
          <div className="nameContainer">
             <div className="socialContainer">
-               <p>Alexej Holad</p>
+               <p>Alexej</p>
                <a href="https://github.com/AlexHolad" target="new">
                   <img
                      className="socialIconSmall"
