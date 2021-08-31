@@ -26,8 +26,8 @@ const Newsletter = () => {
          .catch((error) => {
             console.log(error);
          });
-      
-         console.log('CLICK', email);
+
+      console.log('CLICK', email);
       setName('');
       setEmail('');
       setSignUp('Check Your Inbox!');
@@ -39,8 +39,13 @@ const Newsletter = () => {
          <div className="formNewsContainer">
             <div className="allLabels">
                <form className="formInputWrapper" onSubmit={handleSubmit}>
-                  <div>
+                  <div className="signUpContainer">
                      <h3 className="signUp">{signup}</h3>
+                     <img
+                        className="emaillIconSmall"
+                        src="./img/email1.png"
+                        alt="email"
+                     />
                   </div>
                   <input
                      className="inputBoxNewsletter"
