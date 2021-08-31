@@ -290,7 +290,6 @@ position: relative; */
    .surpriseTitle .subtitle {
       display: flex;
       justify-content: center;
-
    }
    .surpriseTitle .subtitle h4 {
       font-size: 25px;
@@ -299,5 +298,34 @@ position: relative; */
    .cocktailLoader {
       margin: 0;
       /* height: 250px; */
+   }
+}
+
+.clickMeContainer {
+   width: 100px;
+   padding: 10px 0 0 0;
+   margin: 0 -20px;
+}
+
+.clickMe {
+   display: inline-flex;
+   justify-content: center;
+   color: white;
+   font-family: 'Lato', sans-serif;
+   font-weight: bolder;
+   text-transform: uppercase;
+   font-size: 20px;
+}
+
+@media screen and (min-width: 2000px) {
+   .surpriseWrapper {
+      width: 50vw;
+      min-height: 450px;
+   }
+   .surpriseTitle h1 {
+      font-size: 50px;
+   }
+   .subtitle h4 {
+      font-size: 62px;
    }
 }

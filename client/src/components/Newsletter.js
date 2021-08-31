@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './NewsletterStyles.css';
-import axios from "axios"
+import axios from 'axios';
 
 const Newsletter = () => {
    const [name, setName] = useState('');
@@ -25,8 +25,8 @@ const Newsletter = () => {
          .catch((error) => {
             console.log(error);
          });
-      
-         console.log('CLICK', email);
+
+      console.log('CLICK', email);
       setName('');
       setEmail('');
       setSignUp('Check Your Inbox!');
@@ -43,7 +43,7 @@ const Newsletter = () => {
                      <img
                         className="emaillIconSmall"
                         src="./img/email1.png"
-                        alt=""
+                        alt="email"
                      />
                   </div>
                   <input
