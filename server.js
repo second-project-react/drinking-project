@@ -166,6 +166,6 @@ app.get('*', (req, res) => {
 
 // UPDATE note
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
    console.log('Server is ready in PORT 5000');
 });
