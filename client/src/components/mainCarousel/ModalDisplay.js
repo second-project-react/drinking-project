@@ -87,7 +87,7 @@ function ModalDisplay(props) {
   const saveToDatabase = (item) => {
     Axios({
       method: "post",
-      url: "http://localhost:5000/favorites",
+      url: "https://thecocktailbar.herokuapp.com/favorites",
       data: { idDrink : item.idDrink , strDrink: item.strDrink, strDrinkThumb: item.strDrinkThumb,userId:item.userId },
       headers: {
         'Access-Control-Allow-Origin': '*',
@@ -104,7 +104,7 @@ function ModalDisplay(props) {
 
   const checkIfCocktailInDb = (id, useId) => {
     console.log(id)
-    Axios.get(`http://localhost:5000/favorites/cocktail/${id}/${useId}`)
+    Axios.get(`https://thecocktailbar.herokuapp.com/favorites/cocktail/${id}/${useId}`)
     .then((response) => response.data)
    .then((data)=>{
      console.log(data)
@@ -119,7 +119,7 @@ function ModalDisplay(props) {
  
   const deleteCocktailfromDb = (id, useId) => {
     console.log(id)
-    Axios.get(`http://localhost:5000/favorites/delete/${id}/${useId}`)
+    Axios.get(`https://thecocktailbar.herokuapp.com/favorites/delete/${id}/${useId}`)
     .then((response) => response.data)
    .then((data)=>{
      console.log(data)

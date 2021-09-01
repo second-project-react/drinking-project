@@ -14,7 +14,7 @@ const Footer = () => {
       e.preventDefault();
       axios({
          method: 'post',
-         url: 'http://localhost:5000/message',
+         url: 'https://thecocktailbar.herokuapp.com//message',
          data: { name: name, email: email, message: message },
          headers: {
             'Access-Control-Allow-Origin': '*',
