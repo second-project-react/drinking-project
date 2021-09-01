@@ -12,7 +12,7 @@ const Newsletter = () => {
       e.preventDefault();
       axios({
          method: 'post',
-         url: 'https://thecocktailbar.herokuapp.com/subscribe',
+         url: 'https://thecocktailbar.herokuapp.com/api/subscribe',
          data: { name: name, email: email },
          headers: {
             // 'Access-Control-Allow-Origin': '*',

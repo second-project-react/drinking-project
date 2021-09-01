@@ -25,7 +25,7 @@ database.connect((err) => {
 });
 
 // Table messages
-app.get('/message', (req, res) => {
+app.get('/api/message', (req, res) => {
    database
       .promise()
       .query('SELECT * FROM messages')
@@ -37,7 +37,7 @@ app.get('/message', (req, res) => {
       });
 });
 
-app.post('/message', (req, res) => {
+app.post('/api/message', (req, res) => {
    const { name, email, message } = req.body;
    database
       .promise()
@@ -51,7 +51,7 @@ app.post('/message', (req, res) => {
 });
 
 // Table newsletter
-app.get('/subscribers', (req, res) => {
+app.get('/api/subscribers', (req, res) => {
    database
       .promise()
       .query('SELECT * FROM newsletter')
@@ -63,7 +63,7 @@ app.get('/subscribers', (req, res) => {
       });
 });
 
-app.post('/subscribe', (req, res) => {
+app.post('/api/subscribe', (req, res) => {
    const { name, email } = req.body;
    database
       .promise()
@@ -72,7 +72,7 @@ app.post('/subscribe', (req, res) => {
       .catch((err) => res.send(err));
 });
 
-app.get('/favorites/user/:id', (req, res) => {
+app.get('/api/favorites/user/:id', (req, res) => {
    const id = req.params.id;
    database
       .promise()
@@ -85,7 +85,7 @@ app.get('/favorites/user/:id', (req, res) => {
       });
 });
 
-app.get('/favorites/cocktail/:id/:userId', (req, res) => {
+app.get('/api/favorites/cocktail/:id/:userId', (req, res) => {
    const id = req.params.id;
    const userId = req.params.userId;
 
@@ -104,7 +104,7 @@ app.get('/favorites/cocktail/:id/:userId', (req, res) => {
       });
 });
 
-app.get('/favorites/delete/:id/:userId', (req, res) => {
+app.get('/api/favorites/delete/:id/:userId', (req, res) => {
    const id = req.params.id;
    const userId = req.params.userId;
 
@@ -128,7 +128,7 @@ app.get('/favorites/delete/:id/:userId', (req, res) => {
       });
 });
 
-app.post('/favorites', (req, res) => {
+app.post('/api/favorites', (req, res) => {
    const { idDrink, strDrink, strDrinkThumb, userId } = req.body;
    database
       .promise()
@@ -141,7 +141,7 @@ app.post('/favorites', (req, res) => {
 });
 
 // Login
-app.post('/login', (req, res) => {
+app.post('/api/login', (req, res) => {
    const { username, password } = req.body;
    console.log(username);
    database

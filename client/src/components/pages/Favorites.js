@@ -24,7 +24,7 @@ const Favorites = () => {
         console.log("settimeout")
         if (user) {
            
-    axios.get(`https://thecocktailbar.herokuapp.com/favorites/user/${user.id}`)
+    axios.get(`https://thecocktailbar.herokuapp.com/api/favorites/user/${user.id}`)
     .then((response) => response.data)
    .then((data)=>{
         setFavItems(data)

@@ -26,7 +26,7 @@ const LoginForm = () => {
       e.preventDefault();
       axios({
         method: "post",
-        url: "https://thecocktailbar.herokuapp.com/login",
+        url: "https://thecocktailbar.herokuapp.com/api/login",
         data: { username: username , password: password},
         headers: {
           'Access-Control-Allow-Origin': '*',
