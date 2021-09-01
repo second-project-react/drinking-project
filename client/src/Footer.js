@@ -19,7 +19,7 @@ const Footer = () => {
          headers: {
             'Access-Control-Allow-Origin': '*',
             'Content-type': 'application/json',
-         },
+            },
       })
          .then((data) => {
             console.log('Hi Jaime');
